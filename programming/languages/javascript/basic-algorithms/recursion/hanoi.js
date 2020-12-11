@@ -10,4 +10,4 @@ function hanoi(first, second, third, number) {
   }
 }
 
-hanoi("f", "s", "t", 4);
+hanoi("f", "s", "t", 3);
