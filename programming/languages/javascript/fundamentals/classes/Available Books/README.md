@@ -1,4 +1,5 @@
 # Available Books
+
 Creating a simple solution for an inventory app, both before ES6 and after that
 
 ## What You'll Do
