@@ -1,4 +1,4 @@
-# 01_05 Private Object
+# Private Variables
 
 Using JS ES6 Symbols as unique property keys to an object.
 
