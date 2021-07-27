@@ -1,4 +1,6 @@
-# 01_08 Dynamic Colors
+# Dynamic Colors
+
+Using closure in a simple JS application.
 
 ## What You'll Do
 
