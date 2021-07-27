@@ -1,7 +1,4 @@
-/*
-  THIS IS THE FINAL SOLUTION PRESENTED IN THE VIDEO
-*/
-
+// Callback functions are functions that get passed to other functions as arguments and get called at a later point in time.
 function clock() {
   const clockNode = document.querySelector("#clock");
   return setInterval(() => {
