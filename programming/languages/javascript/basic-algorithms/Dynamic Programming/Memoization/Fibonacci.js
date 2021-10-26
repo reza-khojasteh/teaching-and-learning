@@ -1,4 +1,4 @@
-// Lookup/memorization table
+// Lookup/memoization table
 const lookup = {
   fib1: 0, //represents the number of times fib1 has been called
   fib2: 0, //represents the number of times fib2 has been called
