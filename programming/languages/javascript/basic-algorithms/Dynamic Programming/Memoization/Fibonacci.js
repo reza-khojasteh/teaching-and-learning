@@ -35,11 +35,29 @@ const fib2 = (n) => {
 // Also, S(n) = O(n) + (n + 1) * O(1) = O(n)
 // Note that the size of call stack storing all these active recursive calls in O(n) in both cases. So, overall, adding memoization doesn't impact the space complexity in here -- O(n) + O(n) = O(n) -- [in some examples it does because either the number of the keys is not simply a "1 changing parameter," or the size of each value in each pair isn't just an integer and hence, not O(1)!].
 
+// Bottom-up DP approach: an iterative solution, this time utilizing tabulation
+const fib3 = (n) => {
+  const dp = new Array(n + 1);
+  dp[0] = 0;
+  dp[1] = 1;
+
+  for (let i = 2; i < dp.length; i++) {
+    dp[i] = dp[i - 1] + dp[i - 2];
+  }
+  return dp[n];
+};
+// In above solution, T(n) = (n - 1) * O(1) = O(n)
+// Also, S(n) = (n + 1) * O(1) = O(n)
+
 // Testing....
 console.time("Execution Time");
 console.log(fib1(45), lookup["fib1"]); //1134903170 3672623805(no. of nodes in the call tree)
-console.timeEnd("Execution Time"); //Around 16 seconds on my device
+console.timeEnd("Execution Time"); //Around 17 seconds on my device
 
 console.time("Execution Time");
 console.log(fib2(45), lookup["fib2"]); //1134903170 89(no. of nodes in the call tree)
 console.timeEnd("Execution Time"); //Around 0.45 milliseconds on my device!
+
+console.time("Execution Time");
+console.log(fib3(45)); //1134903170
+console.timeEnd("Execution Time"); //Around 0.25 milliseconds on my device!
