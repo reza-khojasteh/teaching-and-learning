@@ -1,10 +1,10 @@
-// Lookup/memoization table
+// Lookup table/memoization
 const lookup = {
   fib1: 0, //represents the number of times fib1 has been called
   fib2: 0, //represents the number of times fib2 has been called
 };
 
-//Recursive solution
+// Recursive solution: not a DP solution!
 const fib1 = (n) => {
   lookup["fib1"]++; // To track how many times we called this function (each call is a node in the call tree)
 
@@ -17,7 +17,7 @@ const fib1 = (n) => {
 // In above solution, T(n) = O(φ ^ n) where φ ≈ 1.618
 // Also, S(n) = n = O(n) which is the maximum size of the call stack.
 
-//Recursive solution, this time utilizing the lookup table
+// Top-down DP approach: recursive solution, this time utilizing the lookup table/memoization
 const fib2 = (n) => {
   lookup["fib2"]++; // To track how many times we called this function (each call is a node in the call tree)
 
@@ -35,7 +35,7 @@ const fib2 = (n) => {
 // Also, S(n) = O(n) + (n + 1) * O(1) = O(n)
 // Note that the size of call stack storing all these active recursive calls in O(n) in both cases. So, overall, adding memoization doesn't impact the space complexity in here -- O(n) + O(n) = O(n) -- [in some examples it does because either the number of the keys is not simply a "1 changing parameter," or the size of each value in each pair isn't just an integer and hence, not O(1)!].
 
-//Testing....
+// Testing....
 console.time("Execution Time");
 console.log(fib1(45), lookup["fib1"]); //1134903170 3672623805(no. of nodes in the call tree)
 console.timeEnd("Execution Time"); //Around 16 seconds on my device
