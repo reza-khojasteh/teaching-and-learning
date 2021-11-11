@@ -2,8 +2,8 @@
 
 import java.util.*;
 
-class FindAllSubsequences {  
-    public static void findAllSubsequences(char[] array, int index, ArrayList<Character> subsequence)
+class PrintAllSubsequences {  
+    public static void printAllSubsequences(char[] array, int index, ArrayList<Character> subsequence)
     {
         // Print the subsequence when reaching a leaf in the call tree
         if (index == array.length)
@@ -18,13 +18,13 @@ class FindAllSubsequences {
             subsequence.add(array[index]);
 
             // 1-b: Find all subsequences which do include the element at the current index of the array
-            findAllSubsequences(array, index + 1, subsequence);
+            printAllSubsequences(array, index + 1, subsequence);
             
             // 2-a: Remove the element at the current index of the array from the beginning of the next-to-be-formed subsequences
             subsequence.remove(subsequence.size() - 1);
             
             // 2-b: And find all subsequences which don't include the element at the current index of the array
-            findAllSubsequences(array, index + 1, subsequence);
+            printAllSubsequences(array, index + 1, subsequence);
         }
     }
 
@@ -34,6 +34,6 @@ class FindAllSubsequences {
         char[] array = { 'a', 'b', 'c' };
         ArrayList<Character> subsequence = new ArrayList<>();
         
-        findAllSubsequences(array, 0, subsequence);
+        printAllSubsequences(array, 0, subsequence);
     }
 }
