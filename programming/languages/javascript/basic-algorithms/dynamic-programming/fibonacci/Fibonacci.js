@@ -49,6 +49,24 @@ const fib3 = (n) => {
 // In above solution, T(n) = (n - 1) * O(1) = O(n)
 // Also, S(n) = (n + 1) * O(1) = O(n)
 
+// Bottom-up DP approach: this time saving even more space!
+const fib4 = (n) => {
+  let current,
+    previous,
+    beforePrevious = 0;
+  beforePrevious = 0;
+  previous = 1;
+
+  for (let i = 2; i <= n; i++) {
+    current = previous + beforePrevious;
+    beforePrevious = previous;
+    previous = current;
+  }
+  return previous;
+};
+// In above solution, T(n) = (n - 1) * O(1) = O(n) and hence, no change.
+// But S(n) = 3 = O(1)
+
 // Testing....
 console.time("Execution Time");
 console.log(fib1(45), lookup["fib1"]); //1134903170 3672623805(no. of nodes in the call tree)
@@ -61,3 +79,7 @@ console.timeEnd("Execution Time"); //Around 0.45 milliseconds on my device!
 console.time("Execution Time");
 console.log(fib3(45)); //1134903170
 console.timeEnd("Execution Time"); //Around 0.25 milliseconds on my device!
+
+console.time("Execution Time");
+console.log(fib4(45)); //1134903170
+console.timeEnd("Execution Time"); //Around 0.25 milliseconds on my device (with saving more space of course!)
