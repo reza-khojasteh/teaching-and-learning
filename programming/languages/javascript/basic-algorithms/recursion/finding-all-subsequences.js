@@ -2,7 +2,7 @@
 
 function findAllSubsequences(array, index, subsequence) {
   // Print the subsequence when reaching a leaf in the call tree
-  if (index == array.length) {
+  if (index === array.length) {
     // Condition to avoid printing empty subsequences
     if (subsequence.length > 0) console.log(`[${subsequence}]`);
   } else {
