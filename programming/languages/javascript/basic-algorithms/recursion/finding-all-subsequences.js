@@ -18,7 +18,6 @@ function findAllSubsequences(array, index, subsequence) {
     // 2-b: And find all subsequences which don't include the element at the current index of the array
     findAllSubsequences(array, index + 1, subsequence);
   }
-  return;
 }
 
 // Testing
