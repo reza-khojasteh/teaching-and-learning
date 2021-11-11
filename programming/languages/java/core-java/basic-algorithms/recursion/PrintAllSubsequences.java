@@ -1,6 +1,8 @@
 // Java code to print all possible subsequences for a given Array using recursion
 
 import java.util.*;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 class PrintAllSubsequences {  
     public static void printAllSubsequences(char[] array, int index, ArrayList<Character> subsequence)
@@ -25,6 +27,13 @@ class PrintAllSubsequences {
             
             // 2-b: And find all subsequences which don't include the element at the current index of the array
             printAllSubsequences(array, index + 1, subsequence);
+
+            // OR Solution 2:
+            // // 1: Print all Subsequences including the element at current index
+            // printAllSubsequences(array, index + 1, (ArrayList<Character>)Stream.concat(subsequence.stream(), Arrays.asList(array[index]).stream()).collect(Collectors.toList()));
+
+            // // 2: Print all Subsequences excluding the element at current index
+            // printAllSubsequences(array, index + 1, subsequence);
         }
     }
 
