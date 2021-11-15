@@ -1,6 +1,7 @@
 {
   "java.project.sourcePaths": [
     "programming/languages/java/core-java/basic-algorithms/basic-algorithms/dynamic-programming/fibonacci",
-    "programming/languages/java/core-java/Functional Programming and Lambda Expressions in Java/Streams"
+    "programming/languages/java/core-java/Functional Programming and Lambda Expressions in Java/Streams/IntStreamSample",
+    "programming/languages/java/core-java/Functional Programming and Lambda Expressions in Java/Streams/StreamSample"
   ]
 }
