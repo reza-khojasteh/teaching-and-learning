@@ -1,5 +1,5 @@
 # Java 8's [Functional Programming](https://en.wikipedia.org/wiki/Functional_programming) and [Lambda Expressions](https://docs.oracle.com/javase/tutorial/java/javaOO/lambdaexpressions.html) #  
-In Java 8, functional programming and lambda expressions were added as language features.  
+In Java 8, **functional programming** and **lambda expressions** were added as language features.  
 
 The two core paradigms of functional programming are **"immutable values"** *(In Functional Programming, we create and use objects 
 but we do not change their values or states)* 
