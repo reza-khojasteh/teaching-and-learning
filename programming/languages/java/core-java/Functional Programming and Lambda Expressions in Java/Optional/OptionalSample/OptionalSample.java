@@ -9,7 +9,7 @@ import java.util.Random;
  * 3- returns an optional Integer based on the lambda passed to filter - by calling filter(i -> i % 2 != 0), 
  * 4- returns an optional String based on the lambda passed to map - by calling map(i -> "Your random number, " + i + ", is odd!"),  
  * 5- and finally, if a value is present, performs the given action (printing using method reference println of System.out) with the value, 
- *    otherwise performs the given action. (printing "Your random was even!")
+ *    otherwise performs the given action. (printing "Your random number was even!")
  *
  * @author Reza Khojasteh
  * @version 1.0
