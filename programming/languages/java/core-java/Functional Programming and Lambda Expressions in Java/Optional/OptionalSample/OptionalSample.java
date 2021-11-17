@@ -22,6 +22,6 @@ public class OptionalSample {
 		Optional.of(randomNumber)
 		.filter(i -> i % 2 != 0)
 		.map(i -> "Your random number, " + i + ", is odd!")
-		.ifPresentOrElse(System.out::println, () -> System.out.println("Your random was even!"));
+		.ifPresentOrElse(System.out::println, () -> System.out.println("Your random number was even!"));
 	}
 }
