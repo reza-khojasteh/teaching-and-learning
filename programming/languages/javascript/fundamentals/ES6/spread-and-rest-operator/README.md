@@ -8,4 +8,6 @@ and put them to whatever is around that spread operator**. With that, _we basica
 The same three dots basically could be called the rest operator _where they are used essentially the opposite way_. The rest operator looks just like the spread operator, 
 three dots, and **it's the place where you use it that defines how you call it**.
 
-Rest operator is used to **merge multiple arguments into an array and you use it in the argument list of a function**.
+Rest operator is used to **merge multiple arguments into an array and you use it in the argument list of a function**.  
+
+(It should just be noted that unlike the object de-restructuring, you can choose any names you want for array de-structuring because in arrays your elements have no names and they are instead pulled out by their position.)
