@@ -17,4 +17,4 @@ returning it would convert it to a promise that instantly resolves**.)
 **This approach is more readable than having infinitely nested callbacks** 
 (please have a look at our **second version of the sample solution and compare it with the first one :-)**  
 
-*You can also see and play online with the two above mentioned versions online at [here for version one - using just callbacks](https://codesandbox.io/s/async-sample-callbacks-version-js-4jsc9) and [here for version two - using promises](https://codesandbox.io/s/async-sample-promises-version-js-164p8) :-)*
+*You can also have a look and play with the two above mentioned versions, online, at [here for version one - using just callbacks](https://codesandbox.io/s/async-sample-callbacks-version-js-4jsc9) and [here for version two - using promises](https://codesandbox.io/s/async-sample-promises-version-js-164p8)*
