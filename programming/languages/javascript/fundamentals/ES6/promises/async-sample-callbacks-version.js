@@ -4,7 +4,7 @@ const asyncFunction = (callback) =>
   setTimeout(
     () =>
       callback(
-        "Printing after another another two seconds, inside the callback passed when calling 'asyncFunction', and in an async way!"
+        "Printing after another two seconds, inside the callback passed when calling 'asyncFunction', and in an async way!"
       ),
     2000
   );
