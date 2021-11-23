@@ -1,3 +1,4 @@
+/** @author Reza Khojasteh */
 // Version 2: using promises (compare with version 1 please :-)
 
 const asyncFunction = () => {
