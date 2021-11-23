@@ -1,3 +1,4 @@
+/** @author Reza Khojasteh */
 // Version 1: using just callbacks (compare with version 2 please :-)
 
 const asyncFunction = (callback) =>
