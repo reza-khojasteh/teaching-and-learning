@@ -8,7 +8,7 @@ const asyncFunction = () => {
         // 'resolve' is called when the asynchronous task completes successfully and returns the results of the task as a value.
         // 'reject' is called when the task fails, and returns the reason for failure, which is typically an error object (not used in here though ;-)
         resolve(
-          "Printing after another another two seconds, inside the callback passed to 'then', and in an async way!"
+          "Printing after another two seconds, inside the callback passed to 'then', and in an async way!"
         ),
       2000
     )
