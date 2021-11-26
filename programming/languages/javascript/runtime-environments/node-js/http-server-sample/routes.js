@@ -10,7 +10,7 @@ const requestHandler = (req, res) => {
     res.write("<html>");
     res.write("<head><title>Enter A Message</title></head>");
     res.write(
-      '<body><form action="/message" method="post"><input type="text" name="message"><button>Send</button></form></body>'
+      '<body><form action="/message" method="post"><input type="text" name="message" placeHolder="Enter Username"><button>Send</button></form></body>'
     );
     res.write("</html>");
     res.end();
@@ -27,10 +27,16 @@ const requestHandler = (req, res) => {
       const message = parsedBody.split("=")[1];
 
       fs.writeFile("message.txt", message, (err) => {
-        res.statusCode = 302;
-        res.setHeader("Location", "/");
-        res.end();
+        if (err) {
+          console.log("Error!", err);
+        } else {
+          console.log(message);
+        }
       });
+
+      res.statusCode = 302;
+      res.setHeader("Location", "/");
+      res.end();
     });
   } else {
     res.statusCode = 404;
