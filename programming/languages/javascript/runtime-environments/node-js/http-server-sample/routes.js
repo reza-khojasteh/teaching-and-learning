@@ -4,7 +4,7 @@ const fs = require("fs");
 const requestHandler = (req, res) => {
   const url = req.url;
   const method = req.method;
-  console.log(url, method);
+  console.log(`Receiving a ${method} request to ${url}`);
 
   if (url === "/") {
     res.write("<html>");
@@ -18,7 +18,7 @@ const requestHandler = (req, res) => {
     const body = [];
 
     req.on("data", (chunk) => {
-      console.log(chunk); // The current buffer
+      console.log(`Received chunk is "${chunk}"`); // The current buffer
       body.push(chunk);
     });
 
@@ -30,17 +30,28 @@ const requestHandler = (req, res) => {
         if (err) {
           console.log("Error!", err);
         } else {
-          console.log(message);
+          console.log(`Writing string "${message}" to the file "message.txt"!`);
         }
       });
 
       res.statusCode = 302;
       res.setHeader("Location", "/");
+      res.setHeader("Content-Type", "text/html");
+      // OR
+      // res.writeHead(302, {
+      //   Location: "/",
+      //   "Content-Type": "text/html",
+      // });
+
       res.end();
     });
   } else {
-    res.statusCode = 404;
-    res.setHeader("Content-Type", "text/html");
+    // res.statusCode = 404;
+    // res.setHeader("Content-Type", "text/html");
+    // OR
+    res.writeHead(404, {
+      "Content-Type": "text/html",
+    });
     res.write("<html>");
     res.write("<head><title>Not Found!</title><head>");
     res.write("<body><h1>Page Not Found!</h1></body>");
