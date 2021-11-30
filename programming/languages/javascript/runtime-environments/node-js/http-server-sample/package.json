@@ -8,5 +8,8 @@
     "start": "node app.js"
   },
   "author": "Reza Khojasteh",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^4.1.2"
+  }
 }

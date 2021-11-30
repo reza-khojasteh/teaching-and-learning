@@ -1,10 +1,14 @@
 // A simple file contatining routing logic...
 const fs = require("fs");
 
+const chalk = require("chalk");
+
 const requestHandler = (req, res) => {
   const url = req.url;
   const method = req.method;
-  console.log(`Receiving a ${method} request to ${url}`);
+  console.log(
+    chalk.black.bgGreen.bold(`Receiving a ${method} request to ${url}`)
+  );
 
   if (url === "/") {
     res.write("<html>");
@@ -18,7 +22,7 @@ const requestHandler = (req, res) => {
     const body = [];
 
     req.on("data", (chunk) => {
-      console.log(`Received chunk is "${chunk}"`); // The current buffer
+      console.log(chalk.blue.bold(`Received chunk is "${chunk}"`)); // The current buffer
       body.push(chunk);
     });
 
@@ -28,9 +32,13 @@ const requestHandler = (req, res) => {
 
       fs.writeFile("message.txt", message, (err) => {
         if (err) {
-          console.log("Error!", err);
+          console.log(chalk.red("Error!", err));
         } else {
-          console.log(`Writing string "${message}" to the file "message.txt"!`);
+          console.log(
+            chalk.yellow(
+              `Writing string "${message}" to the file "message.txt"!`
+            )
+          );
         }
       });
 
