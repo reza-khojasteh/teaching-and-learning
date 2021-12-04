@@ -1,6 +1,6 @@
 # [Two Sum](https://leetcode.com/problems/two-sum/) # 
 _Two Sum problem_ is one of those ones I found interesting, 
-due to how changing/turning a data structure might give a better result regarding time/space complexity.
+due to the fact that how changing/turning a data structure might give a better result regarding time/space complexity.
 
 This problem is stated as: 
 >Given an array of integers **nums** and an integer **target**, return indices of the two numbers such that they add up to target.
