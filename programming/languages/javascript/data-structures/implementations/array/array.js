@@ -41,4 +41,4 @@ myArray.deleteAtIndex(0);
 myArray.push("are");
 myArray.push("nice");
 myArray.shiftItems(0);
-console.dir(myArray);
+console.log(myArray);
