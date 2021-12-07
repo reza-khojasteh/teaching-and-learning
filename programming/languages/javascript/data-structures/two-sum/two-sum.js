@@ -4,7 +4,7 @@
  * @return {number[]}
  */
 
-// Version 1: Brute Force
+/** Version 1: Brute Force */
 // const twoSum = (nums, target) => {
 //   for (let p1 = 0; p1 < nums.length - 1; p1++) {
 //     const numberToFind = target - nums[p1];
@@ -20,7 +20,7 @@
 // };
 // T(n) = O(n ^ 2), S(n) = O(1)
 
-// Version 2: Using A HashMap (JavaScript Obj.!) And Traversing The Array Twice
+/** Version 2: Using A HashMap (JavaScript Obj.!) And Traversing The Array Twice */
 // const twoSum = (nums, target) => {
 //   const lookup = {};
 
@@ -36,7 +36,7 @@
 // };
 // T(n) = O(n), S(n) = O(n)
 
-// Vresion 3: Using A HashMap (JavaScript Obj.!) And Traversing The Array Just Once!
+/**  Vresion 3: Using A HashMap (JavaScript Obj.!) And Traversing The Array Just Once! */
 const twoSum = function (nums, target) {
   const numsMap = {};
 
