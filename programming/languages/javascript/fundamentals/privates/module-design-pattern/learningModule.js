@@ -11,7 +11,7 @@ const learningModule = (() => {
     console.log(publicCourses);
   };
 
-  // the public parts/component to be exposed:
+  // the public parts/components to be exposed (the rest would be left as private):
   return {
     publicCourses,
     getPublicCourses,
