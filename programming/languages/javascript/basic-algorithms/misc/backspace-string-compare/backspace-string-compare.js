@@ -1,9 +1,3 @@
-/**
- * @param {string} s
- * @param {string} t
- * @return {boolean}
- */
-
 /** Version 1: Brute Force */
 const buildFinalStringArray = (string) => {
   const builtString = [];
@@ -19,6 +13,11 @@ const buildFinalStringArray = (string) => {
   return builtString;
 };
 
+/**
+ * @param {string} s
+ * @param {string} t
+ * @return {boolean}
+ */
 const compareBackspaceStrings = (s, t) => {
   const finalS = buildFinalStringArray(s);
   const finalT = buildFinalStringArray(t);
