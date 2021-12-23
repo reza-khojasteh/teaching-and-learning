@@ -1,9 +1,8 @@
-/**
- * @param {string} s
- * @return {number}
- */
-
 /** Version 1: Brute Force */
+// /**
+//  * @param {string} s
+//  * @return {number}
+//  */
 // const lengthOfLongestSubstring = (s) => {
 //   if (s.length <= 1) return s.length; // Even if removed, code works correctly!
 
@@ -32,6 +31,10 @@
 // T(n) = O(n ^ 2), S(n) = O(n)
 
 /** Version 2: A better solution... */
+/**
+ * @param {string} s
+ * @return {number}
+ */
 const lengthOfLongestSubstring = (s) => {
   if (s.length <= 1) return s.length;
 
