@@ -1,9 +1,8 @@
-/**
- * @param {number[]} height
- * @return {number}
- */
-
-/** Version 1: Brute Force */
+// /** Version 1: Brute Force */
+// /**
+//  * @param {number[]} height
+//  * @return {number}
+//  */
 // const findMaxWaterContainer = (heights) => {
 //   let maxArea = 0;
 
@@ -21,6 +20,10 @@
 // T(n) = O(n ^ 2), S(n) = O(1)
 
 /** Version 2: A better solution... */
+/**
+ * @param {number[]} height
+ * @return {number}
+ */
 const findMaxWaterContainer = function (heights) {
   let i = 0,
     j = heights.length - 1,
