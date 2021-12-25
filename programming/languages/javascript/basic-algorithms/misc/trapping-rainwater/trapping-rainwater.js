@@ -1,9 +1,8 @@
+/** Version 1: Brute Force */
 /**
  * @param {number[]} height
  * @return {number}
  */
-
-/** Version 1: Brute Force */
 // const findTrappingRainwater = (height) => {
 //   let totalWater = 0;
 
@@ -35,6 +34,10 @@
 // T(n) = O(n ^ 2), S(n) = O(1)
 
 /** Version 2: A better solution... */
+/**
+ * @param {number[]} height
+ * @return {number}
+ */
 // const findTrappingRainwater = function (height) {
 //   let left = 0,
 //     right = height.length - 1,
@@ -69,6 +72,10 @@
 // OR
 
 /** Another version 2: A better solution... */
+/**
+ * @param {number[]} height
+ * @return {number}
+ */
 const findTrappingRainwater = (height) => {
   const maxHeightIndex = height.indexOf(Math.max(...height));
   if (maxHeightIndex === -1) return 0;
