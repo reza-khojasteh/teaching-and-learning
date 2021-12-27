@@ -5,6 +5,10 @@ const lookup = {
 };
 
 // Recursive solution: not a DP solution!
+// /**
+//  * @param {number} n
+//  * @return {number}
+//  */
 const fib1 = (n) => {
   lookup["fib1"]++; // To track how many times we called this function (each call is a node in the call tree)
 
