@@ -22,6 +22,10 @@ const fib1 = (n) => {
 // Also, S(n) = n = O(n) which is the maximum size of the call stack.
 
 // Top-down DP approach: recursive solution, this time utilizing the lookup table/memoization
+// /**
+//  * @param {number} n
+//  * @return {number}
+//  */
 const fib2 = (n) => {
   lookup["fib2"]++; // To track how many times we called this function (each call is a node in the call tree)
 
