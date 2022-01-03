@@ -44,6 +44,10 @@ const fib2 = (n) => {
 // Note that the size of call stack storing all these active recursive calls in O(n) in both cases. So, overall, adding memoization doesn't impact the space complexity in here -- O(n) + O(n) = O(n) -- [in some examples it does because either the number of the keys is not simply a "1 changing parameter," or the size of each value in each pair isn't just an integer and hence, not O(1)!].
 
 // Bottom-up DP approach: an iterative solution, this time utilizing tabulation
+// /**
+//  * @param {number} n
+//  * @return {number}
+//  */
 const fib3 = (n) => {
   const dp = new Array(n + 1);
   dp[0] = 0;
