@@ -1,25 +1,12 @@
-const quickSort = (array, begin, end) => {
-  // Definition of a funciotn, swap, which swaps two elements in the array
-  const swap = (i, j) => {
-    const temp = array[i];
-    array[i] = array[j];
-    array[j] = temp;
-  };
+// Definition of a funciotn, swap, which swaps two elements in the array
+const swap = (array, i, j) => {
+  const temp = array[i];
+  array[i] = array[j];
+  array[j] = temp;
+};
 
-  // If array has no elements or has just one element, it's already sorted!
-  if (end <= begin + 1) {
-    return;
-  }
-
-  // If array has exactly two elements, sort it (if needed) and return!
-  if (end === begin + 2) {
-    if (array[begin] > array[end - 1]) {
-      swap(begin, end - 1);
-    }
-    return;
-  }
-
-  // Main Logic
+// Definition of a funciotn, partition, which partitions the array based on the correct position of pivot
+const partition = (array, begin, end) => {
   let left = begin + 1;
   let right = end - 1;
   let pivot = begin;
@@ -34,12 +21,32 @@ const quickSort = (array, begin, end) => {
     }
 
     if (left < right) {
-      swap(left, right);
+      swap(array, left, right);
     }
   }
 
-  // Now, partition:
-  swap(pivot, right);
+  swap(array, pivot, right);
+  return right;
+};
+
+// QuickSort:
+const quickSort = (array, begin, end) => {
+  // If array has no elements or has just one element, it's already sorted!
+  if (end <= begin + 1) {
+    return;
+  }
+
+  // If array has exactly two elements, sort it (if needed) and return!
+  if (end === begin + 2) {
+    if (array[begin] > array[end - 1]) {
+      swap(array, begin, end - 1);
+    }
+    return;
+  }
+
+  // Partition the array:
+  let right = partition(array, begin, end);
+
   // And recursively sort both partiotions
   quickSort(array, begin, right);
   quickSort(array, right + 1, end);
