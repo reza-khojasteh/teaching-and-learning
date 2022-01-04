@@ -62,6 +62,10 @@ const fib3 = (n) => {
 // Also, S(n) = (n + 1) * O(1) = O(n)
 
 // Bottom-up DP approach: this time saving even more space!
+// /**
+//  * @param {number} n
+//  * @return {number}
+//  */
 const fib4 = (n) => {
   let current,
     previous,
