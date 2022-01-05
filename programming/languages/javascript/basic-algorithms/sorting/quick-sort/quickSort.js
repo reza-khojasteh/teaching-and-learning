@@ -1,15 +1,15 @@
-// Definition of a funciotn, swap, which swaps two elements in the array
+// Definition of a function, swap, which swaps two elements in the array
 const swap = (array, i, j) => {
   const temp = array[i];
   array[i] = array[j];
   array[j] = temp;
 };
 
-// Definition of a funciotn, partition, which partitions the array based on the correct position of pivot
+// Definition of a function, partition, which partitions the array based on the correct position of pivot
 const partition = (array, begin, end) => {
+  let pivot = begin;
   let left = begin + 1;
   let right = end - 1;
-  let pivot = begin;
 
   while (left < right) {
     while (array[left] <= array[pivot] && left < end - 1) {
@@ -90,6 +90,10 @@ quickSort(array, 0, array.length);
 console.log(array);
 
 array = [1, 2, 0];
+quickSort(array, 0, array.length);
+console.log(array);
+
+array = [4, 2, 765, 12, 4, 545.7, 4, 2, 0, 12];
 quickSort(array, 0, array.length);
 console.log(array);
 
