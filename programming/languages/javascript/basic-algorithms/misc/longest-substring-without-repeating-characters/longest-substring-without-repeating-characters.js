@@ -30,7 +30,41 @@
 // };
 // T(n) = O(n ^ 2), S(n) = O(n)
 
-/** Version 2: A better solution... */
+/** Version 2: A (slightly) better solution... */
+/**
+ * @param {string} s
+ * @return {number}
+ */
+//  function lengthOfLongestSubstring(inputStr) {
+//   let maxLen = 1;
+//   let subStr = inputStr[0];
+//   // let result = subStr; // un-comment in case you want to print the result subStr
+
+//   // Edge cases for zero or one char strings!
+//   if (inputStr.length <= 1) {
+//     maxLen = inputStr.length;
+//     // console.log(`result: ${inputStr}`); // un-comment in case you want to print the result subStr
+//     return maxLen;
+//   }
+
+//   for (let i = 1; i < inputStr.length; i++) {
+//     let index = subStr.indexOf(inputStr[i]);
+//     subStr += inputStr[i];
+
+//     if (index >= 0) {
+//       subStr = subStr.slice(index + 1);
+//     } else if (subStr.length > maxLen) {
+//       maxLen = subStr.length;
+//       // result = subStr; // un-comment in case you want to print the result
+//     }
+//   }
+
+//   // console.log(`result: ${result}`); // un-comment in case you want to print the result subStr
+//   return maxLen;
+// }
+// // T(n) = O(n ^ 2), S(n) = O(n)
+
+/** Version 3: A better solution... */
 /**
  * @param {string} s
  * @return {number}
@@ -62,8 +96,9 @@ const lengthOfLongestSubstring = (s) => {
 // Testing...
 console.log(lengthOfLongestSubstring("abccabbqwertyuiopxzghf"));
 console.log(lengthOfLongestSubstring("abccabb"));
-console.log(lengthOfLongestSubstring("abcabcbb"));
+console.log(lengthOfLongestSubstring("abcdabcbb"));
 console.log(lengthOfLongestSubstring("bbbbb"));
 console.log(lengthOfLongestSubstring("pwwkew"));
+console.log(lengthOfLongestSubstring("dvdf"));
 console.log(lengthOfLongestSubstring("p"));
 console.log(lengthOfLongestSubstring(""));
