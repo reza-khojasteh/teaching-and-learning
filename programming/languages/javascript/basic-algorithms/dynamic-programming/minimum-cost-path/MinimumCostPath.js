@@ -4,7 +4,7 @@ const lookup = {
   cost2: 0, //represents the number of times cost2 has been called
 };
 
-//Recursive solution
+//Recursive solution: not a DP solution!
 const cost1 = (matrix, i = 0, j = 0) => {
   const n = matrix.length;
   const m = matrix[0].length;
