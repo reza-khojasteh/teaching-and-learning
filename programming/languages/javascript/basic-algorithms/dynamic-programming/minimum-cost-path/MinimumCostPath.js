@@ -5,6 +5,12 @@ const lookup = {
 };
 
 //Recursive solution: not a DP solution!
+// /**
+//  * @param {number[][]} matrix
+//  * @param {number} i
+//  * @param {number} j
+//  * @return {number}
+//  */
 const cost1 = (matrix, i = 0, j = 0) => {
   const n = matrix.length;
   const m = matrix[0].length;
