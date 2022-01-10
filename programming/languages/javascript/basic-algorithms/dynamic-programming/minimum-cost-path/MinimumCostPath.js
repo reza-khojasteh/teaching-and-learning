@@ -33,6 +33,12 @@ const cost1 = (matrix, i = 0, j = 0) => {
 // Also, S(n, m) = n + m - 1 and therefore, is equal to O(n + m)
 
 //Recursive solution, this time utilizing the lookup table
+// /**
+//  * @param {number[][]} matrix
+//  * @param {number} i
+//  * @param {number} j
+//  * @return {number}
+//  */
 const cost2 = (matrix, i = 0, j = 0) => {
   const n = matrix.length;
   const m = matrix[0].length;
