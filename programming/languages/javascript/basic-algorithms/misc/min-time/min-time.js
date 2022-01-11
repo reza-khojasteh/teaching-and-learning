@@ -1,3 +1,8 @@
+// /**
+//  * @param {number[]} processorTime
+//  * @param {number[]} taskTime
+//  * @return {number}
+//  */
 const minTime = (processorTime, taskTime) => {
   let minTime = 0;
   let currentTask = 0;
