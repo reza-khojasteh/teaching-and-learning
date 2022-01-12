@@ -1,3 +1,10 @@
+// /**
+//  * @param {string} first
+//  * @param {string} second
+//  * @param {string} third
+//  * @param {number} number
+//  * @return {undefined}
+//  */
 function hanoi(first, second, third, number) {
   if (number <= 0) {
     console.log("At least one disk is needed!");
