@@ -17,4 +17,5 @@ function hanoi(first, second, third, number) {
   }
 }
 
+// Testing....
 hanoi("f", "s", "t", 3);
