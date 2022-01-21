@@ -8,6 +8,14 @@ class RecursionTree {
 }
 
 // The function to calculate the nbways and at the same time, form the recursion tree
+// /**
+//  * @param {string} first
+//  * @param {string} second
+//  * @param {string} third
+//  * @param {number} number
+//  * @param {Object} recursionTree
+//  * @return {undefined}
+//  */
 function hanoiWithRecursionTree(first, second, third, number, recursionTree) {
   if (number <= 0) {
     console.log("At least one disk is needed!");
