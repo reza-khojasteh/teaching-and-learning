@@ -1,3 +1,8 @@
+// /**
+//  * @param {array} arr1
+//  * @param {array} arr2
+//  * @return {array}
+//  */
 // First, a function to merge two sorted arrays:
 const merge = (arr1, arr2) => {
   const output = [];
