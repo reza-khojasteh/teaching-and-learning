@@ -18,7 +18,7 @@ function CourseItem(props) {
         title: props.title,
         description: props.description,
         image: props.image,
-        address: props.address,
+        author: props.author,
       });
     }
   }
@@ -31,7 +31,7 @@ function CourseItem(props) {
         </div>
         <div className={classes.content}>
           <h3>{props.title}</h3>
-          <address>{props.address}</address>
+          <h4>{props.author}</h4>
           <p>{props.description}</p>
         </div>
         <div className={classes.actions}>

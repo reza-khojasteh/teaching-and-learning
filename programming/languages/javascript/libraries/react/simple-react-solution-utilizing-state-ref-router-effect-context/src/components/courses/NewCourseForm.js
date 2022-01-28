@@ -14,13 +14,13 @@ function NewCourseForm(props) {
 
     const enteredTitle = titleInputRef.current.value;
     const enteredImage = imageInputRef.current.value;
-    const enteredAddress = authorInputRef.current.value;
+    const enteredAuthor = authorInputRef.current.value;
     const enteredDescription = descriptionInputRef.current.value;
 
     const courseData = {
       title: enteredTitle,
       image: enteredImage,
-      address: enteredAddress,
+      author: enteredAuthor,
       description: enteredDescription,
     };
 

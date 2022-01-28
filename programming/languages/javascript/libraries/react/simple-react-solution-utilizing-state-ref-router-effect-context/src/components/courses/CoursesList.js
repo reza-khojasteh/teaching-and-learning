@@ -10,7 +10,7 @@ function CoursesList(props) {
           id={course.id}
           image={course.image}
           title={course.title}
-          address={course.address}
+          author={course.author}
           description={course.description}
         />
       ))}

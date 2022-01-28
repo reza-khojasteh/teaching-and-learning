@@ -1,10 +1,10 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { BrowserRouter } from 'react-router-dom';
+import React from "react";
+import ReactDOM from "react-dom";
+import { BrowserRouter } from "react-router-dom";
 
-import './index.css';
-import App from './App';
-import { FavoritesContextProvider } from './store/favorites-context';
+import "./index.css";
+import App from "./App";
+import { FavoritesContextProvider } from "./store/favorites-context";
 
 ReactDOM.render(
   <FavoritesContextProvider>
@@ -12,5 +12,5 @@ ReactDOM.render(
       <App />
     </BrowserRouter>
   </FavoritesContextProvider>,
-  document.getElementById('root')
+  document.getElementById("root")
 );

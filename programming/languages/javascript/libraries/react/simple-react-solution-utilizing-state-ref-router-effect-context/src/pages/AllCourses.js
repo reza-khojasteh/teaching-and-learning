@@ -4,10 +4,10 @@ import CoursesList from "../components/courses/CoursesList";
 
 function AllCoursesPage() {
   const [isLoading, setIsLoading] = useState(true);
-  const [loadedCourses, setLoadedCOurses] = useState([]);
+  const [loadedCourses, setLoadedCourses] = useState([]);
 
   useEffect(() => {
-    setIsLoading(true);
+    setIsLoading(true); // Although seems not to be needed!
     fetch(
       "https://react-st-rf-router-effect-ctx-default-rtdb.firebaseio.com/courses.json"
     )
@@ -27,7 +27,7 @@ function AllCoursesPage() {
         }
 
         setIsLoading(false);
-        setLoadedCOurses(courses);
+        setLoadedCourses(courses);
       });
   }, []);
 
