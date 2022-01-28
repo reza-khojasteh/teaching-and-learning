@@ -9,7 +9,7 @@ class ListNode {
 // Generate the linked list
 const linkedList = [5, 4, 3, 2, 1].reduce(
   (acc, val) => new ListNode(val, acc),
-  null
+  null // Necessary to indicate the tail!
 );
 
 // Print the linked list
