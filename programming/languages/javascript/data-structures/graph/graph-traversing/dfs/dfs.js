@@ -34,5 +34,6 @@ const visited = {}; // Hash/Set of visited vertices
 const order = []; // List/Order of traversed vertices by dfs
 
 // Calling dfs and prinitng out the result
+// Note that we assume that there are no isolated nodes, otherwise we should continue calling dfsCycleFinder (as opposed to calling it just once, as it is now,) until no unvisited nodes are left!
 dfs(0);
 console.log(order);
