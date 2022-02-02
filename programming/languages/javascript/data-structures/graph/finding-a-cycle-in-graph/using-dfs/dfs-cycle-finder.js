@@ -1,5 +1,4 @@
 // Finding a cycle in a graph using dfstraversing (by adding a hash/set named 'path' to the original dfs.) Note that the algorithm saves the order of traversed nodes by the time the cycle was found (in the array named 'order'.)
-// We also assume that there are no isolated nodes, otherwise we should continue calling dfsCycleFinder down there (as opposed to calling it just once, as it is now,) until no unvisited nodes are left!
 const dfsCycleFinder = (vertex) => {
   visited[`${vertex}`] = true;
   order.push(vertex);
@@ -46,5 +45,6 @@ const order = []; // List/Order of (maybe partial) traversed vertices by dfsCycl
 const path = {}; // Current path we are on (used to check whether there is a cycle!)
 
 // Calling dfsCycleFinder and prinitng out the result
+// Note that we assume that there are no isolated nodes, otherwise we should continue calling dfsCycleFinder (as opposed to calling it just once, as it is now,) until no unvisited nodes are left!
 console.log(dfsCycleFinder(0));
 console.log(order);
