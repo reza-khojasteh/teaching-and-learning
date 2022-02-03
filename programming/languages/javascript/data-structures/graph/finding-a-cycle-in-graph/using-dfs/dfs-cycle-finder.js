@@ -1,17 +1,17 @@
 // Finding a cycle in a graph using dfstraversing (by adding a hash/set named 'path' to the original dfs.) Note that the algorithm saves the order of traversed nodes by the time the cycle was found (in the array named 'order'.)
 const dfsCycleFinder = (vertex) => {
-  visited[`${vertex}`] = true;
+  visited[vertex] = true;
   order.push(vertex);
 
-  path[`${vertex}`] = true; // Add the current vertex to the current path
+  path[vertex] = true; // Add the current vertex to the current path
 
   for (const neighbor of graph[vertex]) {
-    if (path[`${neighbor}`]) return true; // Return true if cycle detected in this call
+    if (path[neighbor]) return true; // Return true if cycle detected in this call
 
-    if (!visited[`${neighbor}`]) if (dfsCycleFinder(neighbor)) return true; // Or in one of the nested calls!
+    if (!visited[neighbor]) if (dfsCycleFinder(neighbor)) return true; // Or in one of the nested calls!
   }
 
-  path[`${vertex}`] = undefined; // Remove the current vertex from the current path
+  path[vertex] = undefined; // Remove the current vertex from the current path
 
   return false;
 };
@@ -19,7 +19,7 @@ const dfsCycleFinder = (vertex) => {
 // Testing: constructing a sample (directed) graph and calling dfsCycleFinder....
 let n = 6; // Number of nodes in the sample graph
 let edges = [
-  [1, 0], // Removing/commenting out this edge causes the cycle to be removed
+  // [1, 0], // Removing/commenting out this edge causes the cycle to be removed
   [0, 3],
   [3, 1],
   [1, 2],
