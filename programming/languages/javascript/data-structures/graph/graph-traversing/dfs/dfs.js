@@ -1,10 +1,9 @@
 // DFS traversing of a graph
 const dfs = (vertex) => {
-  visited[`${vertex}`] = true;
+  visited[vertex] = true;
   order.push(vertex);
 
-  for (const neighbor of graph[vertex])
-    if (!visited[`${neighbor}`]) dfs(neighbor);
+  for (const neighbor of graph[vertex]) if (!visited[neighbor]) dfs(neighbor);
 };
 
 // Testing: constructing a sample (directed) graph and calling dfs....
