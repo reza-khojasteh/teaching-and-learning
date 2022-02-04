@@ -1,4 +1,4 @@
-// Finding a cycle in a graph using dfstraversing (by adding a hash/set named 'path' to the original dfs.) Note that the algorithm saves the order of traversed nodes by the time the cycle was found (in the array named 'order'.)
+// Finding a cycle in a graph using dfs traversing (by adding a hash/set named 'path' to the original dfs.) Note that the algorithm saves the order of traversed nodes by the time the cycle was found (in the array named 'order'.)
 const dfsCycleFinder = (vertex) => {
   visited[vertex] = true;
   order.push(vertex);
