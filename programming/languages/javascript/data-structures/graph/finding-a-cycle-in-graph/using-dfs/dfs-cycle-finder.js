@@ -19,7 +19,7 @@ const dfsCycleFinder = (vertex) => {
 // Testing: constructing a sample (directed) graph and calling dfsCycleFinder....
 let n = 6; // Number of nodes in the sample graph
 let edges = [
-  // [1, 0], // Removing/commenting out this edge causes the cycle to be removed
+  [1, 0], // Removing/commenting out this edge causes the cycle to be removed
   [0, 3],
   [3, 1],
   [1, 2],
