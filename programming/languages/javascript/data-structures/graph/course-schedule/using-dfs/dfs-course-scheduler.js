@@ -1,5 +1,9 @@
 // Finding topological sort, in case there are not any cycles in a graph using dfs traversing (by adding a hash/set named 'path' to the original dfs.)
-
+// /**
+//  * @param {number} n
+//  * @param {array} edges
+//  * @return {boolean}
+//  */
 const courseScheduler = (n, edges) => {
   // In case this function returns true, we can count on the order of traversed nodes as the topological sort (in the array named 'order'.)
   const dfsCourseScheduler = (vertex) => {
