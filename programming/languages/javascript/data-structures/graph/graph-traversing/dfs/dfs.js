@@ -1,4 +1,8 @@
 // DFS traversing of a graph
+// /**
+//  * @param {number} vertex
+//  * @return {array} order
+//  */
 const dfs = (vertex) => {
   visited[vertex] = true;
   order.push(vertex);
