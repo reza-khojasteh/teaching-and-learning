@@ -2,7 +2,6 @@
 
 // DFS traversing of a graph (we are here assuming that vertices are numbered 0 to n - 1; if this is not the case, we could take the approach in 'dfs.java')
 /**
-/**
  * @param {number} vertex
  * @return {boolean}
  */
