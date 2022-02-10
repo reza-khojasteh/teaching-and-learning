@@ -1,4 +1,4 @@
-// DFS traversing of a graph
+// DFS traversing of a graph (assuming that vertices are numbered 0 to n - 1)
 /**
  * @param {number} vertex
  * @return {array} order
