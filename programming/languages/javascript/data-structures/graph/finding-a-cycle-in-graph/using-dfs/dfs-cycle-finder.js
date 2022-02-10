@@ -1,6 +1,7 @@
 // Finding a cycle in a graph using dfs traversing (by adding a hash/set named 'path' to the original dfs.) Note that the algorithm saves the order of traversed nodes by the time the cycle was found (in the array named 'order'.)
 
-// DFS traversing of a graph (assuming that vertices are numbered 0 to n - 1)
+// DFS traversing of a graph (we are here assuming that vertices are numbered 0 to n - 1; if this is not the case, we could take the approach in 'dfs.java')
+/**
 /**
  * @param {number} vertex
  * @return {boolean}
@@ -58,7 +59,7 @@ const order = []; // List/Order of (maybe partial) traversed vertices by dfsCycl
 
 const path = {}; // Current path we are on (used to check whether there is a cycle!)
 
-// Calling dfsCycleFinder and prinitng out the result
+// Calling dfsCycleFinder and printing out the result
 // Note that we assume that there are no isolated nodes, otherwise we should continue calling dfsCycleFinder (as opposed to calling it just once, as it is now,) until no unvisited nodes are left!
 console.log(
   dfsCycleFinder(0)
