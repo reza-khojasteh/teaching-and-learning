@@ -7,7 +7,7 @@
 const courseScheduler = (n, edges) => {
   // In case this function returns true, we can count on the order of traversed nodes as the topological sort (in the array named 'order'.)
 
-  // DFS traversing of a graph (assuming that vertices are numbered 0 to n - 1)
+  // DFS traversing of a graph (we are here assuming that vertices are numbered 0 to n - 1; if this is not the case, we could take the approach in 'dfs.java')
   /**
    * @param {number} vertex
    * @return {array} order
