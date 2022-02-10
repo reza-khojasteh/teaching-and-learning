@@ -2,8 +2,20 @@
 const dfsConnectedSubgraphsFinder = () => {
   const connectedSubgraphs = []; // This will contain connected subgraphs
 
-  // DFS traversing of a graph
+  // DFS traversing of a graph (assuming that vertices are numbered 0 to n - 1)
+  /**
+   * @param {number} vertex
+   * @return {array} order
+   */
   const dfs = (vertex) => {
+    if (!graph[vertex]) {
+      // Vertex is not on the graph!
+      console.log(
+        "This vertex is not on the graph! Please try with another vertex!"
+      );
+      return;
+    }
+
     visited[vertex] = true;
     order.push(vertex);
 
@@ -52,4 +64,7 @@ const dfsConnectedSubgraphsFinder = () => {
 };
 
 // Testing....
-console.log(dfsConnectedSubgraphsFinder());
+console.log(
+  "The connected subgraphs of this graph, found by DFS traersing, are:",
+  dfsConnectedSubgraphsFinder()
+);
