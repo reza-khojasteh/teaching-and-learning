@@ -1,8 +1,8 @@
 // DFS traversing of a graph
-// /**
-//  * @param {number} vertex
-//  * @return {array} order
-//  */
+/**
+ * @param {number} vertex
+ * @return {array} order
+ */
 const dfs = (vertex) => {
   if (!graph[vertex]) {
     // Vertex is not on the graph!
