@@ -1,12 +1,26 @@
 // Finding topological sort, in case there are not any cycles in a graph using dfs traversing (by adding a hash/set named 'path' to the original dfs.)
-// /**
-//  * @param {number} n
-//  * @param {array} edges
-//  * @return {boolean}
-//  */
+/**
+ * @param {number} n
+ * @param {array} edges
+ * @return {boolean}
+ */
 const courseScheduler = (n, edges) => {
   // In case this function returns true, we can count on the order of traversed nodes as the topological sort (in the array named 'order'.)
+
+  // DFS traversing of a graph (assuming that vertices are numbered 0 to n - 1)
+  /**
+   * @param {number} vertex
+   * @return {array} order
+   */
   const dfsCourseScheduler = (vertex) => {
+    if (!graph[vertex]) {
+      // Vertex is not on the graph!
+      console.log(
+        "This vertex is not on the graph! Please try with another vertex!"
+      );
+      return;
+    }
+
     visited[vertex] = true;
     order.push(vertex);
 
@@ -42,7 +56,6 @@ const courseScheduler = (n, edges) => {
   let cycle = false;
   for (let i = 0; i < n && !cycle; i++) {
     if (!visited[i]) {
-      // console.log(dfsCourseScheduler(i));
       if (!dfsCourseScheduler(i)) {
         cycle = true;
       }
@@ -50,7 +63,7 @@ const courseScheduler = (n, edges) => {
   }
 
   if (!cycle) {
-    console.log(order);
+    console.log("One possible order of taking these courses is:", order);
   } else {
     console.log("It won't be possible because of the presence of cycle(s).");
   }
@@ -59,7 +72,7 @@ const courseScheduler = (n, edges) => {
 // Testing: constructing a sample (directed) graph and calling dfsCourseScheduler....
 let n = 6; // Number of nodes in the sample graph
 let edges = [
-  [1, 0], // Removing/commenting out this edge causes the cycle to be removed
+  // [1, 0], // Removing/commenting out this edge causes the cycle to be removed
   [0, 3],
   [3, 1],
   [1, 2],
