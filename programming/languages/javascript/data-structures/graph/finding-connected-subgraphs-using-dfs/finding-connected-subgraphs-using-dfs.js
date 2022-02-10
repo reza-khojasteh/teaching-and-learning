@@ -2,7 +2,7 @@
 const dfsConnectedSubgraphsFinder = () => {
   const connectedSubgraphs = []; // This will contain connected subgraphs
 
-  // DFS traversing of a graph (assuming that vertices are numbered 0 to n - 1)
+  // DFS traversing of a graph (we are here assuming that vertices are numbered 0 to n - 1; if this is not the case, we could take the approach in 'dfs.java')
   /**
    * @param {number} vertex
    * @return {array} order
@@ -65,6 +65,6 @@ const dfsConnectedSubgraphsFinder = () => {
 
 // Testing....
 console.log(
-  "The connected subgraphs of this graph, found by DFS traersing, are:",
+  "The connected subgraphs of this graph, found by DFS traversing, are:",
   dfsConnectedSubgraphsFinder()
 );
