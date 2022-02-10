@@ -4,6 +4,14 @@
 //  * @return {array} order
 //  */
 const dfs = (vertex) => {
+  if (!graph[vertex]) {
+    // Vertex is not on the graph!
+    console.log(
+      "This vertex is not on the graph! Please try with another vertex!"
+    );
+    return;
+  }
+
   visited[vertex] = true;
   order.push(vertex);
 
@@ -39,4 +47,4 @@ const order = []; // List/Order of traversed vertices by dfs
 // Calling dfs and prinitng out the result
 // Note that we assume that there are no isolated nodes, otherwise we should continue calling dfsCycleFinder (as opposed to calling it just once, as it is now,) until no unvisited nodes are left!
 dfs(0);
-console.log(order);
+console.log("The vertices are visited in this order:", order);
