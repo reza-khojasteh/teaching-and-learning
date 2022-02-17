@@ -15,6 +15,8 @@ const inOrder = (root) => {
     inOrder(root.right);
   }
 };
+// T(n) = O(n) where n is the number of nodes in the binary tree
+// S(n) = O(h) where h is the height of the binary tree (the additional space comes from the maximum call stack size)
 
 // Testing....
 const root = new BinaryTree(34);
