@@ -6,7 +6,7 @@ class nAryTree {
   }
 }
 
-// PreOrder traversing of a binary tree
+// PreOrder traversing of a n-ary tree
 const preOrder = (root) => {
   if (root) {
     console.log(root.data);
@@ -15,8 +15,8 @@ const preOrder = (root) => {
     }
   }
 };
-// T(n) = O(n) where n is the number of nodes in the binary tree
-// S(n) = O(h) where h is the height of the binary tree (the additional space comes from the maximum call stack size)
+// T(n) = O(n) where n is the number of nodes in the n-ary tree
+// S(n) = O(h) where h is the height of the n-ary tree (the additional space comes from the maximum call stack size)
 
 // Testing....
 const root = new nAryTree(34, [
