@@ -1,4 +1,4 @@
-//There are two columns in “score.txt”.
+//There are two columns in 'score.txt'.
 //The first column shows the names of students who took the exam.
 //Each name consists of one word (no spaces).
 //The second column stores the scores of corresponding students.
