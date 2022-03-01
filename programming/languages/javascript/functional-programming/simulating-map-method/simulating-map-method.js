@@ -1,4 +1,9 @@
 // Simulating array's map function in JS using either array's for...of
+/**
+ * @param {array} arr
+ * @param {function} func
+ * @return {array} newArray
+ */
 const map = (arr, func) => {
   let newArray = [];
   for (const element of arr) newArray.push(func(element));
