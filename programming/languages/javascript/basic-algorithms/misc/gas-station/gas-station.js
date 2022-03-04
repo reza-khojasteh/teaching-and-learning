@@ -25,11 +25,11 @@
 // };
 
 // A better way though
-// /**
-//  * @param {array} gasArray
-//  * @param {array} costArray
-//  * @return {number}
-//  */
+/**
+ * @param {array} gasArray
+ * @param {array} costArray
+ * @return {number}
+ */
 const gasStation = (gasArray, costArray) => {
   let remaining = 0;
   let previousRemaining = 0;
