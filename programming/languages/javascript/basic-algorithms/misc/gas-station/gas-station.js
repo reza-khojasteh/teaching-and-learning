@@ -17,6 +17,11 @@
 //   return true;
 // };
 
+/**
+ * @param {array} gasArray
+ * @param {array} costArray
+ * @return {number}
+ */
 // const gasStation = (gasArray, costArray) => {
 //   for (let index = 0; index < gasArray.length; index++) {
 //     if (canTraverse(gasArray, costArray, index)) return index;
