@@ -1,3 +1,7 @@
+/**
+ * @param {number} n
+ * @return {array}
+ */
 const parenthesesGenerator = (n) => {
   const combinations = []; // This array will hold all combinations at the end.
 
