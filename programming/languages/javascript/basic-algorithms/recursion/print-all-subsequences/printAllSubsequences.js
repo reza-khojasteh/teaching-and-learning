@@ -1,5 +1,9 @@
 // Javascript code to print all possible subsequences for a given Array using recursion
-
+/**
+ * @param {array} array
+ * @param {number} index
+ * @param {array} subsequence
+ */
 function printAllSubsequences(array, index, subsequence) {
   // Print the subsequence when reaching a leaf in the call tree
   if (index === array.length) {
