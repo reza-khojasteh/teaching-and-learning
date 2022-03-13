@@ -194,5 +194,3 @@ console.log(result8.value, result8.items, lookup["knapsack2"]); // 1024 [
 // ] 16304(no. of nodes in the call tree)
 console.timeEnd("Execution Time"); //Around 30.813ms on my device
 console.log();
-
-// console.log(lookup);// For logging purposes...
