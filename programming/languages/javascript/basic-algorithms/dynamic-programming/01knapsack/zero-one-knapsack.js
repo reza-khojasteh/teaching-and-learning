@@ -5,6 +5,13 @@ const lookup = {
 };
 
 // Recursive solution: not a DP solution!
+// /**
+//  * @param {array} values
+//  * @param {array} weights
+//  * @param {number} k
+//  * @param {number} i
+//  * @return {number}
+//  */
 const zeroOneKnapsack1 = (values, weights, k, i = 0) => {
   lookup["knapsack1"]++; // To track how many times we called this function (each call is a node in the call tree)
 
