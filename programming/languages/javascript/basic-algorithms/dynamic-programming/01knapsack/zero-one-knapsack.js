@@ -28,6 +28,14 @@ const zeroOneKnapsack1 = (values, weights, k, i = 0) => {
 // Also, S(n) = O(n) which is the maximum size of the call stack.
 
 // Top-down DP approach: recursive solution, this time utilizing the lookup table/memoization
+// Recursive solution: not a DP solution!
+// /**
+//  * @param {array} values
+//  * @param {array} weights
+//  * @param {number} k
+//  * @param {number} i
+//  * @return {number}
+//  */
 const zeroOneKnapsack2 = (values, weights, k, i = 0) => {
   lookup["knapsack2"]++; // To track how many times we called this function (each call is a node in the call tree)
 
