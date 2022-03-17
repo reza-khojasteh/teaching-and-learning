@@ -23,6 +23,10 @@ const printList = (head) => {
 };
 
 // Reverse the linked list
+/**
+ * @param {object} head
+ * @return {object}
+ */
 var reverseList = function (head) {
   let prev = null;
   let current = head;
