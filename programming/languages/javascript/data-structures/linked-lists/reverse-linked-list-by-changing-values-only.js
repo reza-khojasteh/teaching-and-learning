@@ -33,6 +33,10 @@ const printList = (head) => {
 };
 
 // Reverse the linked list
+/**
+ * @param {object} list
+ * @return {object}
+ */
 const reverseListByChangingValuesOnly = (list) => {
   let length = 0;
   //   let temp = list.head;
