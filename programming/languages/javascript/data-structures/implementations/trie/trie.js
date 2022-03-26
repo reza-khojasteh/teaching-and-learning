@@ -1,3 +1,4 @@
+// An implementation for a trie DS node which (recursively) utilizes a node for each child
 class Trie {
   constructor(isEnd = false) {
     this.isEnd = isEnd;
