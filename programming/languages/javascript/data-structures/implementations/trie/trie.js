@@ -1,5 +1,6 @@
 // An implementation for a trie DS node which (recursively) utilizes a node for each child
 class Trie {
+  // The constructor to create a new trie node
   constructor(isEnd = false) {
     this.isEnd = isEnd;
     this.children = {};
@@ -42,7 +43,7 @@ class Trie {
           s,
           i + 1
         );
-        if (shouldContinueDeletion) delete node.children[s[i]];
+        if (shouldContinueDeletion) delete node.children[s[i]]; // It is important to delete rather than setting 'node.children[s[i]]' to {}, null, or undefined!
 
         return (
           shouldContinueDeletion &&
