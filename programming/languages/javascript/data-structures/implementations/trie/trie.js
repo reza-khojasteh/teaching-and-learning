@@ -6,6 +6,10 @@ class Trie {
     this.children = {};
   }
 
+  build(words) {
+    for (const word of words) this.insert(word);
+  }
+
   insert(s) {
     let node = this;
 
@@ -89,6 +93,8 @@ class Trie {
 // Testing...
 const trie = new Trie();
 
+// trie.build(["car", "carpet", "crab", "crime", "trap", "trapeze", "type", "typed", "typo"]);
+// OR
 trie.insert("car");
 trie.insert("carpet");
 trie.insert("crab");
