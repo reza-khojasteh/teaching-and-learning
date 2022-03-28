@@ -20,16 +20,26 @@ class Trie {
     node.isEnd = true;
   }
 
-  search(s) {
+  getNode(s) {
     let node = this;
 
     for (const ch of s) {
-      if (!node.children[ch]) return false;
+      if (!node.children[ch]) return null;
 
       node = node.children[ch];
     }
 
-    return node.isEnd;
+    return node;
+  }
+
+  search(s) {
+    let node = this.getNode(s);
+
+    return node !== null && node.isEnd;
+  }
+
+  startsWith(s) {
+    return this.getNode(s) !== null;
   }
 
   delete(s) {
@@ -91,6 +101,9 @@ trie.insert("typo");
 
 console.log(trie.search("trapeze")); // true
 console.log(trie.search("types")); // false
+console.log(trie.startsWith("typ")); // true
+console.log(trie.startsWith("type")); // true
+console.log(trie.startsWith("tyu")); // false
 
 trie.delete("machinable"); // No effect!
 trie.delete("trap");
