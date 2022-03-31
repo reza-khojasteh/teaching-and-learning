@@ -6,6 +6,7 @@ class Trie {
     this.children = {};
   }
 
+  // The method to build a trie based on an array of words
   build(words) {
     for (const word of words) this.insert(word);
   }
