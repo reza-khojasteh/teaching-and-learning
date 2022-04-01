@@ -11,6 +11,7 @@ class Trie {
     for (const word of words) this.insert(word);
   }
 
+  // The method to insert a string into the trie
   insert(s) {
     let node = this;
 
