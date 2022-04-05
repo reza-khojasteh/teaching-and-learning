@@ -1,7 +1,6 @@
 const frequencies = {
   nQueens1: 0,
   nQueens2: 0,
-  nQueens3: 0,
 };
 
 const nQueens1 = (n, i, result, results) => {
@@ -54,41 +53,8 @@ const nQueens2 = (n, i, remainedItems, columnPositions, results) => {
 };
 // T(n) = O(n ^ 2 * n!)
 
-// OR even better:
-// const nQueens3 = (
-//   n,
-//   i,
-//   remainedItems,
-//   lastSelectedColumn,
-//   columnPositions,
-//   results
-// ) => {
-//   frequencies.nQueens3++;
-
-//   if (i === n) results.push([...columnPositions]);
-//   else {
-//     for (const key in remainedItems) {
-//       console.log(+key, lastSelectedColumn - 1, lastSelectedColumn + 1);
-//       if (
-//         i > 0 &&
-//         +key !== lastSelectedColumn - 1 &&
-//         +key !== lastSelectedColumn + 1
-//       ) {
-//         columnPositions[i] = remainedItems[key];
-//         delete remainedItems[key];
-
-//         nQueens3(n, i + 1, remainedItems, +key, columnPositions, results);
-
-//         columnPositions.pop(); // Not really needed though! ;-)
-//         remainedItems[key] = +key;
-//       }
-//     }
-//   }
-// };
-// T(n) = O(n!)
-
 // Testing...
-const numberOfQueens = 4;
+const numberOfQueens = 8;
 let results = [];
 const result = [];
 nQueens1(numberOfQueens, 0, result, results);
@@ -101,11 +67,3 @@ for (let i = 0; i < numberOfQueens; i++) {
 }
 nQueens2(numberOfQueens, 0, remainedItems, [], results);
 console.log(results, results.length, frequencies.nQueens2); // ... 92 2057
-
-// results = [];
-// remainedItems = {};
-// for (let i = 0; i < numberOfQueens; i++) {
-//   remainedItems[i] = i;
-// }
-// nQueens3(numberOfQueens, 0, remainedItems, -2, [], results);
-// console.log(results, results.length);
