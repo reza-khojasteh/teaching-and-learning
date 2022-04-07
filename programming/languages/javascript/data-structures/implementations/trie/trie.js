@@ -26,6 +26,7 @@ class Trie {
     node.isEnd = true;
   }
 
+  // The method to return the node which contains the string 's' (or null if 's' does not exist in the trie.)
   getNode(s) {
     let node = this;
 
