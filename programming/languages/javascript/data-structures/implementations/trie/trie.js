@@ -39,6 +39,7 @@ class Trie {
     return node;
   }
 
+  // The method to search a string 's' in the trie
   search(s) {
     let node = this.getNode(s);
 
