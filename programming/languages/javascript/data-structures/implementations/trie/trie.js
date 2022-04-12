@@ -46,6 +46,7 @@ class Trie {
     return node !== null && node.isEnd;
   }
 
+  // The method to check whether there are any strings which start with (OR are exactly the same as) 's' in the trie
   startsWith(s) {
     return this.getNode(s) !== null;
   }
