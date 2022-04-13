@@ -1,4 +1,4 @@
-// The order of all the following algorithms are O(n)
+// The order of all the following algorithms are O(log(n))
 // Also, the last two could be combined by passing in a function to do the comparison (the rest are the same!)
 const binarySearch = (x, list) => {
   let low = 0;
