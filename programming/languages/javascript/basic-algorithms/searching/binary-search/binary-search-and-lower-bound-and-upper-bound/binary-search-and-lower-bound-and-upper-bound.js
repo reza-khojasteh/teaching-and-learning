@@ -14,6 +14,7 @@ const binarySearch = (x, list) => {
   }
 };
 
+// The lowerBoundSearch based on BS above
 const lowerBoundSearch = (x, list) => {
   let low = 0;
   let high = list.length - 1;
