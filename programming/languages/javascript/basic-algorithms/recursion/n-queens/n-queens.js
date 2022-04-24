@@ -1,3 +1,4 @@
+// An object used as a hash to count the frequencies of recursive calls!
 const frequencies = {
   nQueens1: 0,
   nQueens2: 0,
