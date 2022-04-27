@@ -18,8 +18,6 @@ const minimumRemoveToMakeValidParentheses = (s) => {
     }
   }
 
-  //   console.log(stack);
-
   while (stack.length != 0) {
     currentChar = stack.pop();
 
@@ -32,6 +30,7 @@ const minimumRemoveToMakeValidParentheses = (s) => {
 
   return result;
 };
+// T(n) = O(n) and S(n) = O(n)
 
 // Testing....
 console.log(minimumRemoveToMakeValidParentheses("))(("));
