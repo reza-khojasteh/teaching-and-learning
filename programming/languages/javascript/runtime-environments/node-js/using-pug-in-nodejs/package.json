@@ -1,0 +1,15 @@
+{
+  "name": "using-pug-in-nodejs",
+  "version": "1.0.0",
+  "description": "Showing the basics of how we can use pug(jade) in nodejs",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "Reza Khojasteh",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.3",
+    "pug": "^3.0.2"
+  }
+}
