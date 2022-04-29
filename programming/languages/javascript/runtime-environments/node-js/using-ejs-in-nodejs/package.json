@@ -1,0 +1,16 @@
+{
+  "name": "using-ejs-in-nodejs",
+  "version": "1.0.0",
+  "description": "Showing the basics of how we can use ejs in nodejs",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "Reza Khojasteh",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "ejs": "^3.1.7",
+    "express": "^4.16.3"
+  }
+}
