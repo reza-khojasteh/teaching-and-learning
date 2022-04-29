@@ -62,18 +62,22 @@ class MyQueue {
       while (this.stack1.peek()) this.stack2.push(this.stack1.pop());
     }
   }
+  // T(n) = O(n), S(n) = O(n)
 
   pop() {
     return this.stack2.pop();
   }
+  // T(n) = O(1), S(n) = O(1)
 
   peek() {
     return this.stack2.peek();
   }
+  // T(n) = O(1), S(n) = O(1)
 
   empty() {
     return this.stack2.isEmpty();
   }
+  // T(n) = O(1), S(n) = O(1)
 }
 
 // Testing...
