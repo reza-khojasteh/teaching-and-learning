@@ -46,36 +46,75 @@ class Stack {
 // console.log(stack.peek());
 
 // Our class Queue definition (based on the problem specs!)
+// class MyQueue {
+//   constructor() {
+//     this.stack1 = new Stack();
+//     this.stack2 = new Stack();
+//   }
+
+//   push(x) {
+//     if (this.stack2.isEmpty()) this.stack2.push(x);
+//     else {
+//       while (this.stack2.peek()) this.stack1.push(this.stack2.pop());
+
+//       this.stack2.push(x);
+
+//       while (this.stack1.peek()) this.stack2.push(this.stack1.pop());
+//     }
+//   }
+//   // T(n) = O(n), S(n) = O(n)
+
+//   pop() {
+//     return this.stack2.pop();
+//   }
+//   // T(n) = O(1), S(n) = O(1)
+
+//   peek() {
+//     return this.stack2.peek();
+//   }
+//   // T(n) = O(1), S(n) = O(1)
+
+//   empty() {
+//     return this.stack2.isEmpty();
+//   }
+//   // T(n) = O(1), S(n) = O(1)
+// }
+
+//OR an even a better solution with O(1) push operation and Amortized O(1) pop operation (O(1) average time per operation.)
+// The explanation can be found at: https://leetcode.com/problems/implement-queue-using-stacks/solution/
+
+// Our class Queue definition(based on the problem specs!)
 class MyQueue {
   constructor() {
     this.stack1 = new Stack();
     this.stack2 = new Stack();
+    this.front = null;
   }
 
   push(x) {
-    if (this.stack2.isEmpty()) this.stack2.push(x);
-    else {
-      while (this.stack2.peek()) this.stack1.push(this.stack2.pop());
+    if (this.stack1.isEmpty()) this.front = x;
 
-      this.stack2.push(x);
-
-      while (this.stack1.peek()) this.stack2.push(this.stack1.pop());
-    }
+    this.stack1.push(x);
   }
-  // T(n) = O(n), S(n) = O(n)
+  // T(n) = O(1), S(n) = O(n)
 
   pop() {
+    if (this.stack2.isEmpty())
+      while (!this.stack1.isEmpty()) this.stack2.push(this.stack1.pop());
+
     return this.stack2.pop();
   }
-  // T(n) = O(1), S(n) = O(1)
+  // T(n) = O(n) but Amortized O(1)!, S(n) = O(1)
 
   peek() {
-    return this.stack2.peek();
+    if (!this.stack2.isEmpty()) return this.stack2.peek();
+
+    return this.front;
   }
   // T(n) = O(1), S(n) = O(1)
 
   empty() {
-    return this.stack2.isEmpty();
+    return this.stack1.isEmpty() && this.stack2.isEmpty();
   }
   // T(n) = O(1), S(n) = O(1)
 }
