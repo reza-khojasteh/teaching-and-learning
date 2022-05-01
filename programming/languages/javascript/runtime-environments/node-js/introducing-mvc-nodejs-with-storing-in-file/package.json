@@ -1,0 +1,16 @@
+{
+  "name": "introducing-mvc-nodejs-with-storing-in-file",
+  "version": "1.0.0",
+  "description": "Introducing MVC design pattern in a simple NodeJS e-shop application which uses a json file as the storage for products (with just titles.)",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "Reza Khojasteh",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "ejs": "^3.1.7",
+    "express": "^4.16.3"
+  }
+}
