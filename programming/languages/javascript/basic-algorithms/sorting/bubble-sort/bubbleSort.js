@@ -11,6 +11,7 @@ function bubbleSort(array) {
   //main body/operation
   for (let i = 0; i < n - 1 && !sorted; i++) {
     sorted = true;
+
     for (let j = 0; j < n - i - 1; j++) {
       if (array[j] > array[j + 1]) {
         swap(j);
@@ -25,6 +26,7 @@ function bubbleSort(array) {
     sorted = false;
   }
 }
+
 //Test Data
 const a1 = [4, 2, 765, 12, -434, 545.7, 423.54, -454.6, 0, 34];
 bubbleSort(a1);
