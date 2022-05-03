@@ -12,7 +12,14 @@ const getProductsFromFile = (cb) => {
     if (err) {
       cb([]);
     } else {
-      cb(JSON.parse(fileContent));
+      try {
+        cb(JSON.parse(fileContent));
+      } catch (error) {
+        fs.writeFile(p, JSON.stringify([]), (err) => {
+          if (err) console.error(err);
+          else cb([]);
+        });
+      }
     }
   });
 };
@@ -27,7 +34,7 @@ module.exports = class Product {
       products.push(this);
 
       fs.writeFile(p, JSON.stringify(products), (err) => {
-        if (err) throw err;
+        if (err) console.log(err);
         else cb();
       });
     });

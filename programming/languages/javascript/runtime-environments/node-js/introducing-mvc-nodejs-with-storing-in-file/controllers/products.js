@@ -10,15 +10,9 @@ exports.getAddProduct = (req, res, next) => {
 exports.postAddProduct = (req, res, next) => {
   const product = new Product(req.body.title);
 
-  try {
-    product.save(() => {
-      res.redirect("/");
-    });
-  } catch (err) {
-    console.error(err);
-  } finally {
+  product.save(() => {
     res.redirect("/");
-  }
+  });
 };
 
 exports.getProducts = (req, res, next) => {
