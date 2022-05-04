@@ -53,4 +53,5 @@ let grid = [
 
 sudoku(grid);
 
+// Printing the grid as a table
 console.table(grid);
