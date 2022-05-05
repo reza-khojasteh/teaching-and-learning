@@ -12,12 +12,17 @@ function selectionSort(array) {
     //main body/operation
     for (let j = i + 1; j < array.length; j++) {
       if (array[j] < min) {
+        // or (array[j] < array[minIndex])
         min = array[j];
         minIndex = j;
       }
     }
     swap(i, minIndex);
+    // or just simply:
+    // array[i] = array[minIndex];
+    // array[minIndex] = temp; // (while temp's value has been set to array[i] at the beginning of the first loop.)
   }
+
   //swaps two elements in the array
   function swap(i, j) {
     const temp = array[i];
