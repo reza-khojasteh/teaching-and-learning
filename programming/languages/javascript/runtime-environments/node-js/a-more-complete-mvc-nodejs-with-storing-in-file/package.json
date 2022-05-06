@@ -1,0 +1,16 @@
+{
+  "name": "a-more-complete-mvc-nodejs-with-storing-in-file",
+  "version": "1.0.0",
+  "description": "A more complete MVC design pattern in a simple NodeJS e-shop application which uses json files as the storages for products and carts.",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "Reza Khojasteh",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "ejs": "^3.1.7",
+    "express": "^4.16.3"
+  }
+}
