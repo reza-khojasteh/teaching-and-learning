@@ -16,9 +16,14 @@ const merge = (arr1, arr2) => {
   // Now, fill up the rest with the one which still has some elements in, either this way:
   for (let index = i; index < arr1.length; index++) output.push(arr1[index]);
   for (let index = j; index < arr2.length; index++) output.push(arr2[index]);
+
   // Or this way (which needs the output array, defined above, to be 'let', not 'const'):
   //   if (i < arr1.length) output = [...output, ...arr1.slice(i)]; // OR output.concat(arr1.slice(i));
   //   else output = [...output, ...arr2.slice(j)]; // OR output.concat(arr2.slice(j));
+
+  // Or even shorter (the third way)
+  // return output.concat(arr1.slice(i).concat(arr2.slice(j))); //Or, a bit longer:
+  // return output.concat(arr1.slice(i)).concat(arr2.slice(j));
 
   // Below, is yet another method which could also be used to do the same thing (replacing the whole 'while' loop above):
   // while (i < arr1.length || j < arr2.length) {
