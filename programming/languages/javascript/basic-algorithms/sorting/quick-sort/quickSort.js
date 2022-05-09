@@ -5,7 +5,7 @@ const swap = (array, i, j) => {
   array[j] = temp;
 };
 
-// Definition of a function, partition, which partitions the array based on the correct position of pivot
+// Definition of a function, partition, which partitions an array, based on the correct position of a pivot (which is set to the array's 'begin' at the beginning.)
 const partition = (array, begin, end) => {
   let pivot = begin;
   let left = begin + 1;
