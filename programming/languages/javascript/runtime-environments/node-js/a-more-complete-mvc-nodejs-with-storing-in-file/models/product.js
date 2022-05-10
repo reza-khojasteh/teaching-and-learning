@@ -9,32 +9,32 @@ const p = path.join(
   "products.json"
 );
 
-// const getProductsFromFile = (cb) => {
-//   fs.readFile(p, (err, fileContent) => {
-//     if (err) {
-//       cb([]);
-//     } else {
-//       cb(JSON.parse(fileContent));
-//     }
-//   });
-// };
 const getProductsFromFile = (cb) => {
-  // console.log(p);
   fs.readFile(p, (err, fileContent) => {
     if (err) {
       cb([]);
     } else {
-      try {
-        cb(JSON.parse(fileContent));
-      } catch (error) {
-        fs.writeFile(p, JSON.stringify([]), (err) => {
-          if (err) console.error(err);
-          else cb([]);
-        });
-      }
+      cb(JSON.parse(fileContent));
     }
   });
 };
+// const getProductsFromFile = (cb) => {
+//   // console.log(p);
+//   fs.readFile(p, (err, fileContent) => {
+//     if (err) {
+//       cb([]);
+//     } else {
+//       try {
+//         cb(JSON.parse(fileContent));
+//       } catch (error) {
+//         fs.writeFile(p, JSON.stringify([]), (err) => {
+//           if (err) console.error(err);
+//           else cb([]);
+//         });
+//       }
+//     }
+//   });
+// };
 
 module.exports = class Product {
   constructor(id, title, imageUrl, description, price) {
@@ -45,24 +45,33 @@ module.exports = class Product {
     this.price = price;
   }
 
-  save() {
+  save(cb) {
     getProductsFromFile((products) => {
       if (this.id) {
         const existingProductIndex = products.findIndex(
           (prod) => prod.id === this.id
         );
-        const updatedProducts = [...products];
-        updatedProducts[existingProductIndex] = this;
-        fs.writeFile(p, JSON.stringify(updatedProducts), (err) => {
-          // console.log(err);
-        });
+        // const updatedProducts = [...products];
+        // updatedProducts[existingProductIndex] = this;
+        products[existingProductIndex] = this;
+
+        // fs.writeFile(p, JSON.stringify(products), (err) => {
+        //   if (err) console.log(err);
+        //   else cb();
+        // });
       } else {
         this.id = Math.random().toString();
         products.push(this);
-        fs.writeFile(p, JSON.stringify(products), (err) => {
-          // console.log(err);
-        });
+        // fs.writeFile(p, JSON.stringify(products), (err) => {
+        //   if (err) console.log(err);
+        //   else cb();
+        // });
       }
+
+      fs.writeFile(p, JSON.stringify(/*updatedProducts*/ products), (err) => {
+        if (err) console.log(err);
+        else cb();
+      });
     });
   }
 
