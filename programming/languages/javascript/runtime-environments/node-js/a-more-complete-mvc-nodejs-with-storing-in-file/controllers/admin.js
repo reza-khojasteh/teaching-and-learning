@@ -15,19 +15,16 @@ exports.postAddProduct = (req, res, next) => {
   const description = req.body.description;
   const product = new Product(null, title, imageUrl, description, price);
   product.save(() => res.redirect("/"));
-  // res.redirect('/');
 };
 
 exports.getEditProduct = (req, res, next) => {
   const editMode = req.query.edit;
-  if (!editMode) {
-    return res.redirect("/");
-  }
+
+  if (editMode !== "true") return res.redirect("/");
+
   const prodId = req.params.productId;
+
   Product.findById(prodId, (product) => {
-    if (!product) {
-      return res.redirect("/");
-    }
     res.render("admin/edit-product", {
       pageTitle: "Edit Product",
       path: "/admin/edit-product",
@@ -39,10 +36,11 @@ exports.getEditProduct = (req, res, next) => {
 
 exports.postEditProduct = (req, res, next) => {
   const prodId = req.body.productId;
-  const updatedTitle = req.body.title;
   const updatedPrice = req.body.price;
+  const updatedTitle = req.body.title;
   const updatedImageUrl = req.body.imageUrl;
   const updatedDesc = req.body.description;
+
   const updatedProduct = new Product(
     prodId,
     updatedTitle,
@@ -50,11 +48,15 @@ exports.postEditProduct = (req, res, next) => {
     updatedDesc,
     updatedPrice
   );
-  updatedProduct.save(() => res.redirect("/admin/products"));
+
+  Product.findById(prodId, (product) => {
+    const priceDifference = updatedPrice - product.price;
+    updatedProduct.save(() => res.redirect("/admin/products"), priceDifference);
+  });
 };
 
 exports.getProducts = (req, res, next) => {
-  Product.fetchAll((products) => {
+  Product.getProducts((products) => {
     res.render("admin/products", {
       prods: products,
       pageTitle: "Admin Products",
