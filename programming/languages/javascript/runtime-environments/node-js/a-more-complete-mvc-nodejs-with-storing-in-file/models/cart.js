@@ -68,7 +68,7 @@ module.exports = class Cart {
       const existingProduct = cart.products.find((p) => p.id === productId);
 
       if (existingProduct) {
-        const existingProductQty = +existingProduct.qty;
+        const existingProductQty = existingProduct.qty;
         cart.totalPrice += priceDifference * existingProductQty;
       }
 

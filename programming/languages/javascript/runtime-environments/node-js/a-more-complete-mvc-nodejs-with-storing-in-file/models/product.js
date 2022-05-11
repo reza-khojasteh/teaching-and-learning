@@ -33,7 +33,7 @@ module.exports = class Product {
         );
         products[existingProductIndex] = this;
 
-        if (priceDifference) Cart.adjustPrice(this.id, +priceDifference);
+        if (priceDifference) Cart.adjustPrice(this.id, priceDifference);
       } else {
         this.id = Math.random().toString();
         products.push(this);
