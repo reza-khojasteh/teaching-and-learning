@@ -4,7 +4,7 @@ const path = require("path");
 const Cart = require("./cart");
 
 const p = path.join(
-  path.dirname(process.mainModule.filename),
+  path.dirname(require.main.filename),
   "data",
   "products.json"
 );
@@ -18,23 +18,6 @@ const getProductsFromFile = (cb) => {
     }
   });
 };
-// const getProductsFromFile = (cb) => {
-//   // console.log(p);
-//   fs.readFile(p, (err, fileContent) => {
-//     if (err) {
-//       cb([]);
-//     } else {
-//       try {
-//         cb(JSON.parse(fileContent));
-//       } catch (error) {
-//         fs.writeFile(p, JSON.stringify([]), (err) => {
-//           if (err) console.error(err);
-//           else cb([]);
-//         });
-//       }
-//     }
-//   });
-// };
 
 module.exports = class Product {
   constructor(id, title, imageUrl, description, price) {
@@ -51,38 +34,27 @@ module.exports = class Product {
         const existingProductIndex = products.findIndex(
           (prod) => prod.id === this.id
         );
-        // const updatedProducts = [...products];
-        // updatedProducts[existingProductIndex] = this;
         products[existingProductIndex] = this;
-
-        // fs.writeFile(p, JSON.stringify(products), (err) => {
-        //   if (err) console.log(err);
-        //   else cb();
-        // });
       } else {
         this.id = Math.random().toString();
         products.push(this);
-        // fs.writeFile(p, JSON.stringify(products), (err) => {
-        //   if (err) console.log(err);
-        //   else cb();
-        // });
       }
 
-      fs.writeFile(p, JSON.stringify(/*updatedProducts*/ products), (err) => {
+      fs.writeFile(p, JSON.stringify(products), (err) => {
         if (err) console.log(err);
         else cb();
       });
     });
   }
 
-  static deleteById(id) {
+  static deleteById(id, cb) {
     getProductsFromFile((products) => {
       const product = products.find((prod) => prod.id === id);
       const updatedProducts = products.filter((prod) => prod.id !== id);
+
       fs.writeFile(p, JSON.stringify(updatedProducts), (err) => {
-        if (!err) {
-          Cart.deleteProduct(id, product.price);
-        }
+        if (err) console.log(err);
+        else Cart.deleteProduct(id, product.price, () => cb());
       });
     });
   }
