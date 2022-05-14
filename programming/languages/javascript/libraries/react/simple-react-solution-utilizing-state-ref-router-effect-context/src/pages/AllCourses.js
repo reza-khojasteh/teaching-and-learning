@@ -9,7 +9,8 @@ function AllCoursesPage() {
   useEffect(() => {
     setIsLoading(true); // Although seems not to be needed!
     fetch(
-      "https://react-st-rf-router-effect-ctx-default-rtdb.firebaseio.com/courses.json"
+      //Add your firebase real time database link as the value of the 'REACT_APP_FIREBASE_REALTIME_DATABASE' in a '.dtenv' file (in the root of the project)
+      process.env.REACT_APP_FIREBASE_REALTIME_DATABASE
     )
       .then((response) => {
         return response.json();
