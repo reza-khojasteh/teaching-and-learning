@@ -62,11 +62,12 @@ const getPartition = (array, left, right) => {
   let partitionIndex = left;
 
   for (let j = left; j < right; j++) {
-    if (array[j] <= pivotElement) {
+    if (array[j] < pivotElement) {
       swap(array, partitionIndex, j);
       partitionIndex++;
     }
   }
+
   swap(array, partitionIndex, right);
 
   return partitionIndex;
