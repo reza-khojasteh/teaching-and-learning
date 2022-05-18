@@ -8,6 +8,24 @@ const swap = (array, i, j) => {
 };
 
 // Definition of a function, getPartition, which partitions an array, based on the correct position of a pivot (which is set to the array's 'last element' at the beginning.)
+// const getPartition = (array, left, right) => {
+//   const pivotElement = array[right];
+//   let partitionIndex = left;
+
+//   for (let j = left; j < right; j++) {
+//     if (array[j] < pivotElement) {
+//       // Or if (array[j] <= pivotElement) {
+//       swap(array, partitionIndex, j);
+//       partitionIndex++;
+//     }
+//   }
+
+//   swap(array, partitionIndex, right);
+
+//   return partitionIndex;
+// };
+
+// OR
 const getPartition = (array, left, right) => {
   const pivotElement = array[right];
   let partitionIndex = left;
@@ -18,8 +36,6 @@ const getPartition = (array, left, right) => {
       partitionIndex++;
     }
   }
-
-  //   swap(array, partitionIndex, right);
 
   return partitionIndex - 1;
 };
@@ -45,5 +61,5 @@ const findKthLargest = (array, k) => {
 };
 
 const array = [5, 3, 1, 6, 4, 2];
-const kToFind = 2;
-console.log(findKthLargest(array, kToFind));
+const kthLargestIndex = 4;
+console.log(findKthLargest(array, kthLargestIndex));
