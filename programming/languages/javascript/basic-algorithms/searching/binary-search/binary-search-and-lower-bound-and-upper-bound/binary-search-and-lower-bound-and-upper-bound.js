@@ -47,7 +47,9 @@ const upperBoundSearch = (x, list) => {
     else low = mid + 1;
   }
 
-  if (list[low - 1] === x) return low - 1;
+  if (list[low] === x)
+    return low; // For the special case that we have just one element on the list!
+  else if (list[low - 1] === x) return low - 1;
   // Or we can do the same for 'high' because at this point, low === high.
   // Also Note that this is one more than what it should be, hence decreasing that by one!
   else return -1; // Not found!
