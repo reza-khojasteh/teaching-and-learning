@@ -5,6 +5,7 @@ const binarySearch = (x, list) => {
   let high = list.length - 1;
   let mid;
 
+  // while (low < high) doesn't work for arrays with one or two elements!
   while (low <= high) {
     mid = Math.floor((low + high) / 2);
 
