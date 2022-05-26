@@ -1,3 +1,4 @@
+// Function to find a line which passes from both points (x0, y0) and (x1, y1)
 const findLine = (x0, y0, x1, y1) => {
   if (y0 === y1) return [0, y0];
   else if (x0 === x1) return [x0, null];
@@ -8,6 +9,7 @@ const findLine = (x0, y0, x1, y1) => {
   }
 };
 
+// Function to find the maximum number of points on a line
 const maxPoints = (points) => {
   if (points.length === 1) return 1;
 
