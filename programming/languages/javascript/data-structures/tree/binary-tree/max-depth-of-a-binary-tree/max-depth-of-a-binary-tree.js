@@ -5,10 +5,36 @@ class BinaryTreeNode {
     this.left = left;
     this.right = right;
   }
+
+  // A method to insert the values in an 'array' into a binary tree (root.)
+  // In this iterative one, (as opposed to the 'createBinaryTreeFromArrayR' recursive one below,) the input array should have all the elements, row by row, as long as they are either non-null or they reach to 'null' (for the first time!)
+  // As an example,
+  // const root = new TreeNode(1);
+  // root.insert([1,1,1,1,null,null,null,1,null,null,null,1,null,null]);
+  // creates a BinaryTree which is equivalent of the second to last example below (and does it with fewer nodes/nulls!)
+
+  insert(array) {
+    const queue = [this];
+    let i = 0;
+    while (queue.length > 0) {
+      let current = queue.shift();
+      for (let side of ["left", "right"]) {
+        if (!current[side]) {
+          if (array[i] !== null) {
+            current[side] = new TreeNode(array[i]);
+          }
+          i++;
+          if (i >= array.length) return this;
+        }
+        if (current[side]) queue.push(current[side]);
+      }
+    }
+    return this;
+  }
 }
 
 // Creating a binary tree from the data in an array, recursively
-// Note: the input array should have all the elements in all depths (even if null,) down to the last level that we still have (a) non-null value(s)!
+// Note: the input array should have all the elements in all depths (even if null,) down to the last node (in the last level that we still have (a) non-null value(s)!)
 const createBinaryTreeFromArrayR = (array, i = 0) => {
   let root;
 
@@ -23,18 +49,15 @@ const createBinaryTreeFromArrayR = (array, i = 0) => {
   return root;
 };
 
-const maxDepthOfBinaryTree = (root, i = 0, max = Number.MIN_SAFE_INTEGER) => {
+const maxDepthOfBinaryTree = (root, currentNumberOfNodes = 0) => {
   if (root) {
-    i++;
+    currentNumberOfNodes++;
 
     return Math.max(
-      maxDepthOfBinaryTree(root.left, i, max),
-      maxDepthOfBinaryTree(root.right, i, max)
+      maxDepthOfBinaryTree(root.left, currentNumberOfNodes),
+      maxDepthOfBinaryTree(root.right, currentNumberOfNodes)
     );
-  } else if (i > max) {
-    max = i;
-    return max;
-  }
+  } else return currentNumberOfNodes;
 };
 
 // Testing....
@@ -56,6 +79,29 @@ root = createBinaryTreeFromArrayR([
   null,
   null,
   1,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  1,
+]);
+console.log(root, maxDepthOfBinaryTree(root));
+
+root = createBinaryTreeFromArrayR([
+  1,
+  1,
+  1,
+  1,
+  1,
+  null,
+  null,
+  null,
+  1,
+  null,
+  null,
   null,
   null,
   null,
