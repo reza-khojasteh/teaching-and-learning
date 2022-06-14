@@ -1,6 +1,6 @@
 // A simple class representing a binary tree (node)
-class BinaryTree {
-  // The constructor to creat a BinaryTreeNode
+class BinaryTreeNode {
+  // The constructor to create a BinaryTreeNode
   constructor(data, left = null, right = null) {
     this.data = data;
     this.left = left;
@@ -24,7 +24,7 @@ class BinaryTree {
         // if (!current[side]) {// The commented out lines in this loop should be uncommented if we want to insert nodes in the 'array' to the BinaryTree, wherever null, in a 'BFS' manner or 'row by row' (as we are using a queue in this method.)
         // Otherwise, and supposed we want to insert them as the children of the root (with 'null' left and right), should be back!
         if (array[i] !== null) {
-          current[side] = new TreeNode(array[i]);
+          current[side] = new BinaryTreeNode(array[i]);
         }
 
         i++;
@@ -45,7 +45,7 @@ const createBinaryTreeFromArrayR = (array, i = 0) => {
 
   if (i >= array.length || array[i] === null) root = null;
   else {
-    root = new BinaryTree(
+    root = new BinaryTreeNode(
       array[i],
       createBinaryTreeFromArrayR(array, 2 * i + 1),
       createBinaryTreeFromArrayR(array, 2 * i + 2)
