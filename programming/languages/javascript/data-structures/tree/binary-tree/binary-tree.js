@@ -1,6 +1,6 @@
 // A simple class representing a binary tree (node)
 class BinaryTreeNode {
-  // The constructor to creat a BinaryTreeNode
+  // The constructor to create a BinaryTreeNode
   constructor(data, left = null, right = null) {
     this.data = data;
     this.left = left;
