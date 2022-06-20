@@ -55,7 +55,7 @@ const createBinaryTreeFromArrayR = (array, i = 0) => {
 
 // Calculating the maximum depth of a binary tree by counting the number of nodes we see along the longest path (including the root)
 /**
- * @param {BinaryTree} root
+ * @param {BinaryTreeNode} root
  * @return {number}
  */
 const maxDepthOfBinaryTree = (root, currentNumberOfNodes = 0) => {
