@@ -1,3 +1,5 @@
+// A solution to https://leetcode.com/problems/maximum-depth-of-binary-tree/
+
 // A simple class representing a binary tree (node)
 class BinaryTreeNode {
   // The constructor to create a BinaryTreeNode
