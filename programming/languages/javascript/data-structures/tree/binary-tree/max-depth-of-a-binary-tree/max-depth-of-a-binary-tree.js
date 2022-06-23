@@ -1,4 +1,5 @@
-// A solution to the problem: https://leetcode.com/problems/maximum-depth-of-binary-tree/
+// A solution to the problem in (https://leetcode.com/problems/maximum-depth-of-binary-tree/):
+// Given the root of a binary tree, return its maximum depth. A binary tree's maximum depth is the number of nodes along the longest path from the root node down to the farthest leaf node.
 
 // A simple class representing a binary tree (node)
 class BinaryTreeNode {
