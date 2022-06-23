@@ -72,7 +72,7 @@ const maxDepthOfBinaryTree = (root, currentNumberOfNodes = 0) => {
   } else return currentNumberOfNodes;
 };
 
-// Testing....
+// Testing.... (some test cases)
 let root = createBinaryTreeFromArrayR([3, 9, 20, null, null, 15, 7]);
 console.log(root, maxDepthOfBinaryTree(root));
 
