@@ -53,7 +53,7 @@ const createBinaryTreeFromArrayR = (array, i = 0) => {
   return root;
 };
 
-// Testing....
+// Testing.... (some test cases)
 let root = createBinaryTreeFromArrayR([3, 9, 20, null, null, 15, 7]);
 console.log(root);
 
