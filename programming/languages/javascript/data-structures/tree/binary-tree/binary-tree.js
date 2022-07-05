@@ -1,4 +1,4 @@
-// A simple class representing a binary tree (node)
+// A simple class representing a binary tree (or better to say, a binary tree node)
 class BinaryTreeNode {
   // The constructor to create a BinaryTreeNode
   constructor(data, left = null, right = null) {
