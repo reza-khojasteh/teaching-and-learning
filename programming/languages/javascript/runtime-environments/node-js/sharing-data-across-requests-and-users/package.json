@@ -1,7 +1,7 @@
 {
   "name": "nodejs-complete-guide",
   "version": "1.0.0",
-  "description": "Showing how you can share data across requests and users (which is, of course, not wanted!)",
+  "description": "Showing how you can share data across requests and users by storing information in memory ('products' array in this example) in 'admin.js' module (which is, of course, not wanted!)",
   "main": "app.js",
   "scripts": {
     "start": "node app.js"
