@@ -1,0 +1,14 @@
+{
+  "name": "find-anagrams",
+  "version": "1.0.0",
+  "description": "",
+  "main": "find-anagrams.js",
+  "scripts": {
+    "start": "node find-anagrams.js"
+  },
+  "author": "Reza Khojasteh",
+  "license": "ISC",
+  "dependencies": {
+    "an-array-of-english-words": "^2.0.0"
+  }
+}
