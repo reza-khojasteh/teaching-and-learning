@@ -1,4 +1,4 @@
-// Assume we have a funciton which returns another function....
+// Assume we have a function which returns another function....
 const createMultiplier = (y) => (x) => x * y;
 
 // Instead of doing this, one step at a time, as in the commented out code snippet below:
@@ -13,3 +13,5 @@ const quadruple = createMultiplier(4);
 
 // And as an example:
 console.log(double(3));
+console.log(triple(3));
+console.log(quadruple(3));
