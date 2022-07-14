@@ -19,8 +19,10 @@
 
 // console.log([2, 1, 3].slice().sort(ascending));
 // console.log([2, 1, 3].slice().sort(descending));
+// console.log(["banana", "apple", "carrot"].slice().sort(ascending));
+// console.log(["b", "a", "c"].slice().sort(descending));
 
-// OR even simpler!
+// OR even simpler (which works for just numbers!)
 const ascending = (a, b) => a - b;
 
 const descending = (a, b) => b - a;
