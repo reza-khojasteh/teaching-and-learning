@@ -1,3 +1,5 @@
+// The following solutions try to run tests against (assumed) inputs on a web form, in a functional programming manner:
+
 // Solution 1:
 // const currentInputValues = {
 //   firstName: "reza", // Must be at least 2 characters
