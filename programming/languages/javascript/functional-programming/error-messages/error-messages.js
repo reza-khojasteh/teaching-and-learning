@@ -8,6 +8,7 @@
 //   state: "", // Must be exactly 2 characters
 // };
 
+// Each property in the following object contatins an array which holds a field validation function as the first arg, and a message (to be printed out if that function returns false) as the second arg...
 // const inputCriteria = {
 //   firstName: [
 //     (value) => value.length >= 2,
