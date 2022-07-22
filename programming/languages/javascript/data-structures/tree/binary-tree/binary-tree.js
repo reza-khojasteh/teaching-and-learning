@@ -8,10 +8,10 @@ class BinaryTreeNode {
   }
 
   // A method to insert the values in an 'array' into a binary tree (root.)
-  // In this iterative one, (as opposed to the 'createBinaryTreeFromArrayR' recursive one below,) the input array should have all the elements, row by row, as long as they are either non-null or they reach out to 'null' (for the first time!)
+  // In this iterative one, (as opposed to the 'createBinaryTreeFromArrayR' recursive one below,) the input array doesn't need to have all the elements; it has the elements, row by row, as long as they are either non-null or they reach out to 'null' (for the first time!)
   // As an example, the following lines:
   //    const root = new BinaryTreeNode(1);
-  //    root.insert([1,1,1,1,null,null,null,1,null,null,null,1,null,null]);
+  //    root.insert([1, 1, 1, null, null, null, 1, null, 1, null, null]);
   // create a BinaryTree which is equivalent of the second to last example below (and does it with fewer nodes/nulls!)
   insert(array) {
     const queue = [this];
@@ -20,17 +20,18 @@ class BinaryTreeNode {
       let current = queue.shift();
 
       for (let side of ["left", "right"]) {
-        // if (!current[side]) {// The commented out lines in this loop should be uncommented if we want to insert nodes in the 'array' to the BinaryTree, wherever null, in a 'BFS' manner or 'row by row' (as we are using a queue in this method.)
-        // Otherwise, and supposed we want to insert them as the children of the root (with 'null' left and right), should be back!
-        if (array[i] !== null) {
-          current[side] = new BinaryTreeNode(array[i]);
+        if (!current[side]) {
+          // Insert nodes in the 'array' to the BinaryTree, wherever null, in a 'BFS' manner or 'row by row' (as we are using a queue in this method.)
+
+          if (array[i] !== null) {
+            current[side] = new BinaryTreeNode(array[i]);
+          }
+
+          i++;
+
+          if (i >= array.length) return this;
         }
-
-        i++;
-
-        if (i >= array.length) return this;
-        // }
-        /*if (current[side])*/ queue.push(current[side]);
+        if (current[side]) queue.push(current[side]);
       }
     }
     return this;
