@@ -11,10 +11,10 @@ class BinaryTreeNode {
   }
 
   // A method to insert the values in an 'array' into a binary tree (root.)
-  // In this iterative one, (as opposed to the 'createBinaryTreeFromArrayR' recursive one below,) the input array should have all the elements, row by row, as long as they are either non-null or they reach out to 'null' (for the first time!)
+  // In this iterative one, (as opposed to the 'createBinaryTreeFromArrayR' recursive one below,) the input array doesn't need to have all the elements; it has the elements, row by row, as long as they are either non-null or they reach out to 'null' (for the first time!)
   // As an example, the following lines:
   //    const root = new BinaryTreeNode(1);
-  //    root.insert([1,1,1,1,null,null,null,1,null,null,null,1,null,null]);
+  //    root.insert([1, 1, 1, null, null, null, 1, null, 1, null, null]);
   // create a BinaryTree which is equivalent of the second to last example below (and does it with fewer nodes/nulls!)
   insert(array) {
     const queue = [this];
