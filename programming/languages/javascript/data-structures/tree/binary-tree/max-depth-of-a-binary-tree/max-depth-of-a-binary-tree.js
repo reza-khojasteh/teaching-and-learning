@@ -23,17 +23,18 @@ class BinaryTreeNode {
       let current = queue.shift();
 
       for (let side of ["left", "right"]) {
-        // if (!current[side]) {// The commented out lines in this loop should be uncommented if we want to insert nodes in the 'array' to the BinaryTree, wherever null, in a 'BFS' manner or 'row by row' (as we are using a queue in this method.)
-        // Otherwise, and supposed we want to insert them as the children of the root (with 'null' left and right), should be back!
-        if (array[i] !== null) {
-          current[side] = new BinaryTreeNode(array[i]);
+        if (!current[side]) {
+          // Insert nodes in the 'array' to the BinaryTree, wherever null, in a 'BFS' manner or 'row by row' (as we are using a queue in this method.)
+
+          if (array[i] !== null) {
+            current[side] = new BinaryTreeNode(array[i]);
+          }
+
+          i++;
+
+          if (i >= array.length) return this;
         }
-
-        i++;
-
-        if (i >= array.length) return this;
-        // }
-        /*if (current[side])*/ queue.push(current[side]);
+        if (current[side]) queue.push(current[side]);
       }
     }
     return this;
