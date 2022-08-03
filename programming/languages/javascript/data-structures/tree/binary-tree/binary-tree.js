@@ -40,6 +40,10 @@ class BinaryTreeNode {
 
 // Creating a binary tree from the data in an array, recursively
 // Note: the input array should have all the elements in all depths (even if null,) down to the last node (in the last level that we still have (a) non-null value(s)!)
+/**
+ * @param {array} array
+ * @return {BinaryTreeNode} root
+ */
 const createBinaryTreeFromArrayR = (array, i = 0) => {
   let root;
 
