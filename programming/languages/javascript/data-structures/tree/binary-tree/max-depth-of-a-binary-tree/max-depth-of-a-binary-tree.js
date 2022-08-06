@@ -16,6 +16,10 @@ class BinaryTreeNode {
   //    const root = new BinaryTreeNode(1);
   //    root.insert([1, 1, 1, null, null, null, 1, null, 1, null, null]);
   // create a BinaryTree which is equivalent of the second to last example below (and does it with fewer nodes/nulls!)
+  /**
+   * @param {array} array
+   * @return {BinaryTreeNode} root
+   */
   insert(array) {
     const queue = [this];
     let i = 0;
