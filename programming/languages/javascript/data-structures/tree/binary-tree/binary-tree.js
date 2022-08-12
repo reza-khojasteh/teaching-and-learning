@@ -7,7 +7,7 @@ class BinaryTreeNode {
     this.right = right;
   }
 
-  // A method to insert the values in an 'array' into a binary tree (root.)
+  // A method to insert the values in an 'array' into a binary tree (root node.)
   // In this iterative one, (as opposed to the 'createBinaryTreeFromArrayR' recursive one below,) the input array doesn't need to have all the elements; it has the elements, row by row, as long as they are either non-null or they reach out to 'null' (for the first time!)
   // As an example, the following lines:
   //    const root = new BinaryTreeNode(1);
