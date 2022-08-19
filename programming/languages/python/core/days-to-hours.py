@@ -1,3 +1,4 @@
+# A simple Python program to calculate the number of hours in a day...
 hours_in_a_day = 24
 
 
