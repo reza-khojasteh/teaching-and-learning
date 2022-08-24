@@ -2,11 +2,12 @@
 hours_in_a_day = 24
 
 
-# A function to calculate the number of hours in the number of days passed in:
+# A function to return the number of hours in a given number of days passed in:
 def days_to_hours(num_of_days):
     return f"{num_of_days} day(s) is/are {num_of_days * hours_in_a_day} hours."
 
 
+# A function to calculate the number of hours in the number of days passed in:
 def calculate_hours(num_of_days):
     try:
         user_input_number = int(num_of_days)
