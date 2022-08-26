@@ -25,6 +25,7 @@ def calculate_hours(num_of_days):
         print(f"Your input: '{num_of_days}', is not a valid number!")
 
 
+# A loop to accept a list of days, as input from the user and calculate hours per day for each member of that list, until the user enters "exit"
 user_input = input("Enter a comma separated list of days and I will convert them to hours!\n")
 while user_input != "exit":
     for num_of_days in set(user_input.split(", ")):
