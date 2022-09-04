@@ -4,9 +4,9 @@
 # A function to return the number of conversion_units(hours or minutes) in a given number of days passed in:
 def days_to_units(num_of_days, conversion_unit):
     if conversion_unit == "hours":
-        return f"{num_of_days} days are {num_of_days * 24} hours"
+        return f"{num_of_days} day(s) is/are {num_of_days * 24} hours!"
     elif conversion_unit == "minutes":
-        return f"{num_of_days} days are {num_of_days * 24 * 60} minutes"
+        return f"{num_of_days} day(s) is/are {num_of_days * 24 * 60} minutes!"
     else:
         return f"unsupported unit: '{conversion_unit}'!"
 
