@@ -1,3 +1,4 @@
+# A simple program to find the two numbers that add up to a goal number
 def sum_to_goal(goal, list_of_numbers):
     dictionary_of_numbers = {}
 
