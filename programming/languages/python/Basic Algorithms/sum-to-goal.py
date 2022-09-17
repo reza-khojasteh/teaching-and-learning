@@ -4,7 +4,7 @@ def sum_to_goal(goal, list_of_numbers):
 
     for i in list_of_numbers:
         if dictionary_of_numbers.get(goal - i) is not None:
-            return i, dictionary_of_numbers[goal - i]
+            return dictionary_of_numbers[goal - i], i
         else:
             dictionary_of_numbers[i] = i
 
