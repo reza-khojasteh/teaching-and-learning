@@ -1,3 +1,4 @@
+# A recursive solution to check if a string is a palindrome:
 def is_palindrome(word):
     def check_two_sides(left, right):
         if left >= right:
