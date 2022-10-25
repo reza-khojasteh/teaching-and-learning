@@ -23,7 +23,7 @@ import random
 #                 list[j + 1], list[j] = list[j], list[j + 1]
 #                 # print(list)
 
-# Version 3
+# Version 3 (with with O(n^2) for the best)
 
 
 def bubble_sort(list):
