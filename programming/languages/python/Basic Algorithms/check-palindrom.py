@@ -4,6 +4,7 @@ def is_palindrome(word):
         # Base case: if the left and right indices cross, we have a palindrome
         if left >= right:
             return True
+        # General case: if the letters at the left and right indices are the same,
         elif word[left] == word[right]:
             return check_two_sides(left + 1, right - 1)
         return False
