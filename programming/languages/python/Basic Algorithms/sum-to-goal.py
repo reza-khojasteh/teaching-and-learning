@@ -40,9 +40,10 @@
 
 # Or even better (to save space in storing entries as we don't need to store indices here):
 def sum_to_goal(goal, list_of_numbers):
-    set_of_numbers = set() #and not {} as that is reserved for creating empty dicts only!
+    set_of_numbers = set()  # and not {} as that is reserved for creating empty dicts only!
 
     for i in list_of_numbers:
+        # check if the difference between the goal and the current number is in the set
         if goal - i in set_of_numbers:
             return goal - i, i
         else:
