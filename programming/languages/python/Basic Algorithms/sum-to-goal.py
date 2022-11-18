@@ -50,6 +50,7 @@ def sum_to_goal(goal, list_of_numbers):
         else:
             set_of_numbers.add(i)
 
+    # if we reach here, it means we didn't find a pair of numbers that add up to the goal
     return -1
 
 
