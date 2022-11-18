@@ -46,6 +46,7 @@ def sum_to_goal(goal, list_of_numbers):
         # check if the difference between the goal and the current number is in the set
         if goal - i in set_of_numbers:
             return goal - i, i
+        # if not, add the current number to the set
         else:
             set_of_numbers.add(i)
 
