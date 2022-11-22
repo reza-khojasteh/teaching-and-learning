@@ -51,6 +51,7 @@ class Trie {
     return this.getNode(s) !== null;
   }
 
+  // The method to delete a string from the trie (and make any necessary changes!)
   delete(s) {
     const deleteNodesRecursivelyIfNeeded = (node, s, i) => {
       if (i === s.length) {
