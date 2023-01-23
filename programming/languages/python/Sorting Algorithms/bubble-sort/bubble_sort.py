@@ -2,7 +2,6 @@
 # Date: 2023-01-23
 # Description: A simple program to sort a list of numbers using the bubble sort algorithm with O(n^2) for the worst case scenario
 
-import random
 
 # Version 1
 
