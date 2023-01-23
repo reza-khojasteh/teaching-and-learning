@@ -61,10 +61,3 @@ def bubble_sort(list):
                 swapped = True
 
         i += 1
-
-
-# 'list' is a list of 10 randome numbers between 1 and 100, which can have duplicates
-list = random.sample(range(1, 100), 10)
-print(f"Unsorted List: {list}")
-bubble_sort(list)
-print(f"Sorted List: {list}")

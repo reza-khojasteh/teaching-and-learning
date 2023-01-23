@@ -2,10 +2,10 @@
 # Date: 2023-01-23
 # Description: A unit test to test the bubble sort algorithm
 
-# write a unit test composed of different test cases to check the correctness of the the bubble_sort function in the bubble-sort.py file (in the same directory)
-# the test cases should cover all the possible scenarios, including the best case, the worst case, and the average case
-# the test cases should also cover the edge cases, such as an empty list, a list with one element, a list with two elements, and a list with three elements
-# the test cases should also cover the edge cases, such as a list with duplicate elements, a list with negative elements, a list with floating point numbers, and a list with strings
+# This is a unit test composed of different test cases to check the correctness of the the bubble_sort function in the bubble_sort.py file (in the same directory)
+# the test cases cover all the possible scenarios, including the best case, the worst case, and the average case
+# the test cases also cover the edge cases, such as an empty list, a list with one element, a list with two elements, and a list with three elements
+# the test cases also cover the edge cases, such as a list with duplicate elements, a list with negative elements, a list with floating point numbers, and a list with strings
 
 import unittest
 from bubble_sort import bubble_sort
