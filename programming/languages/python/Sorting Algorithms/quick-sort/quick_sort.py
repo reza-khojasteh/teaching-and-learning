@@ -14,8 +14,9 @@ def quick_sort(my_list):
 
 
 def recursive_quick_sort(my_list, start=0, end=None):
-    # uncomment the following two 'print(my_list)' statements and the last commented out ones to see the outcome of the quick sort algorithm, after each swap!
-    if end - start > 0:
+    # uncomment the following two 'print(my_list)' statements and the last commented out ones
+    # to see the outcome of the quick sort algorithm, after each swap!
+    if start < end:
         pivot = end
         pivot_element = my_list[end]
         i = start
