@@ -1,3 +1,4 @@
+# A reccursive function that calculates the power of a number with O(n) time complexity
 def recursive_power_simulator(value, number):
     if number == 0:
         return 1
@@ -5,6 +6,20 @@ def recursive_power_simulator(value, number):
         return value
     else:
         return value * recursive_power_simulator(value, number - 1)
+
+# OR even better, using the following code which gives us O(log(n)) time complexity:
+# def recursive_power_simulator(value, number):
+#     if number == 0:
+#         return 1
+#     elif number == 1:
+#         return value
+#     else:
+#         half = number // 2
+#         result = recursive_power_simulator(value, half)
+#         if number % 2 == 0:
+#             return result * result
+#         else:
+#             return value * result * result
 
 
 print(recursive_power_simulator(3, 3))
