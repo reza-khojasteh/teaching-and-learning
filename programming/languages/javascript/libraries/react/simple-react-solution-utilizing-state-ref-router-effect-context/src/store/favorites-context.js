@@ -16,7 +16,9 @@ export function FavoritesContextProvider(props) {
   const [userFavorites, setUserFavorites] = useState([]);
 
   function addFavoriteHandler(favoriteCourse) {
+    // We're using the function form of setState here because we're using the previous state to update the state. If we were to use the object form of setState, we'd be using the current state to update the state, which would be wrong. The function form of setState is the correct way to update state when it depends on the previous state. [https://reactjs.org/docs/hooks-reference.html#functional-updates]
     setUserFavorites((prevUserFavorites) => {
+      // Although push() is generally faster than concat(), if you use React or a state management library such as Redux (where we do not modify the current state and return the new state on each reducer,) it's good use case for using concat() [https://thisthat.dev/concat-vs-push/]
       return prevUserFavorites.concat(favoriteCourse);
     });
   }
