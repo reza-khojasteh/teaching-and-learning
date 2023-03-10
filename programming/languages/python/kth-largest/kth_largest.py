@@ -30,5 +30,5 @@ def kth_largest(lst, k):
         heapq.heappop(lst)
     return -heapq.heappop(lst)
 
-    # OR with O(nlog(k)):
+    # OR with O(nlog(k)) instead of the above 5 lines!
     # return heapq.nlargest(k, lst)[-1]
