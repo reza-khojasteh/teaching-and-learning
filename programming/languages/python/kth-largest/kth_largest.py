@@ -1,3 +1,5 @@
+# A function to find k'th largest element in a list
+
 # first solution with O(nk)
 # def kth_largest(lst, k):
 #     if k <= 0 or k > len(lst):
