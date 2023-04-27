@@ -1,5 +1,5 @@
 <!-- the README.md file for this folder's solution -->
-<!-- To be completed later (Quick Select Not Included Yet!) -->
+<!-- To be completed later (Quick Select Not Included in the codes Yet!) -->
 
 # Kth Largest Element in an Array
 
