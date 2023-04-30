@@ -1,10 +1,12 @@
 def binary_search(my_list, key):
-    low_index = 0                   # low_index stores lowest index where you might find key
+    # low_index stores lowest index where you might find key
+    low_index = 0                   
     # high_index stores highest index where you might find key
     high_index = len(my_list) - 1
     # initially these indexes cover every element in array
 
-    while low_index <= high_index:  # when low_index become bigger than high index, we stop
+    # when low_index become bigger than high index, we stop
+    while low_index <= high_index:  
         # because we have eliminated all possiblities
         # be careful here, we need to find mid point
         mid_index = (low_index + high_index) // 2
