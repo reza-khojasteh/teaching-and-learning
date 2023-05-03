@@ -21,11 +21,15 @@ import pprint
 try:
     # open the file for reading
     with open("laureates.csv", "r") as f:
+        # create a DictReader object to read the data into dictionaries
         reader = csv.DictReader(f)
+        # convert the DictReader into a list of dictionaries, one per row
         laureates = list(reader)
-
+    # loop through the rows
     for laureate in laureates:
+        # check if the "surname" is "Einstein"
         if laureate["surname"] == "Einstein":
+            # print the row's dictionary using pprint
             pprint.pprint(laureate)
             break
 except FileNotFoundError:
