@@ -31,6 +31,7 @@ with open("laureates.csv", "r") as f:
 for laureate in laureates:
     if laureate["surname"] == "Einstein":
         print((laureate))
+        # datetime.strptime() converts a string into a datetime object according to the format specifier you provide.
         year_date = datetime.strptime(laureate["year"], "%Y")
         print((year_date))
         born_date = datetime.strptime(laureate["born"], "%Y-%m-%d")
