@@ -1,3 +1,26 @@
+"""
+Calculates the power of a number using recursion.
+
+Parameters:
+value (int): The base number.  
+number (int): The exponent.
+
+recursive_power_simulator(value, number)
+The main recursive function that calculates value raised to the power of number.
+
+Base case:  
+if number == 0:  
+Returns 1.  
+
+Base case:
+if number == 1:
+Returns value.
+
+General case:
+Returns value * recursive_power_simulator(value, number - 1). 
+"""
+
+
 # A reccursive function that calculates the power of a number with O(n) time complexity
 def recursive_power_simulator(value, number):
     if number == 0:
