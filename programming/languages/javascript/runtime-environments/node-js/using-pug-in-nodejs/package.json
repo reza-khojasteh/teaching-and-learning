@@ -9,7 +9,7 @@
   "author": "Reza Khojasteh",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.16.3",
+    "express": "^4.19.2",
     "pug": "^3.0.2"
   }
 }
