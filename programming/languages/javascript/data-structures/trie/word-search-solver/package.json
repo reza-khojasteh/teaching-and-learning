@@ -13,6 +13,6 @@
     "nodemon": "^2.0.15"
   },
   "dependencies": {
-    "webdriverio": "^7.19.1"
+    "webdriverio": "^9.15.0"
   }
 }
