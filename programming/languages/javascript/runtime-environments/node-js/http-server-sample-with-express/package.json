@@ -10,7 +10,7 @@
   "author": "Reza Khojasteh",
   "license": "ISC",
   "dependencies": {
-    "body-parser": "^1.20.3",
-    "express": "^4.21.2"
+    "body-parser": "^1.20.4",
+    "express": "^4.22.1"
   }
 }
